@@ -27,9 +27,6 @@ import javax.swing.WindowConstants;
  * @author christian
  */
 public class Restaurante extends Application {
-    private JFrame ventanaPrincipal;
-    private JDialog ventanaSecundaria;
-
     @Override
     public void start(Stage primaryStage) {
         new Intro().setVisible(true);
@@ -39,6 +36,6 @@ public class Restaurante extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        new Intro().setVisible(true);
     }
 }
