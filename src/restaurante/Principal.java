@@ -2,7 +2,7 @@ package restaurante;
 
 import java.awt.Component;
 import restaurante.Pedidos.ListaDeMesas;
-import restaurante.Pedidos.PrimerPlato1;
+import restaurante.Pedidos.PrimerPlato;
 
 public class Principal extends javax.swing.JInternalFrame {
 
@@ -103,7 +103,7 @@ public class Principal extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        PrimerPlato1 p1 = new PrimerPlato1();
+        PrimerPlato p1 = new PrimerPlato();
         Panel.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI)p1.getUI()).setNorthPane(null);
