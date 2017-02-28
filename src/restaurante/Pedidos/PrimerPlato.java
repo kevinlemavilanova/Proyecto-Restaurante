@@ -193,7 +193,23 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-
+        String value = jList1.getSelectedValue().substring(4, jList1.getSelectedValue().length());
+        for(Comida c : lista){
+            String cnombre = c.getNombre();
+            if(cnombre.equals(value)) {
+            } else {
+                c.setCantidad(c.getCantidad()-1);
+                if(c.getCantidad() == 0){
+                    lista.remove(c);
+                }
+                break;
+            }
+        }
+        modelo.removeAllElements();
+        for (Comida c : lista) {
+            modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
+        }        
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
