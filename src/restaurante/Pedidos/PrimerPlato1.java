@@ -182,13 +182,16 @@ public class PrimerPlato1 extends javax.swing.JInternalFrame {
                     aux++;
                 }
                 if (aux == lista.size()) {
+                    comida1.setCantidad(comida1.getCantidad() + 1);
                     lista.add(comida1);
+                    break;
                 }
             }
         } else {
+            comida1.setCantidad(comida1.getCantidad() + 1);
             lista.add(comida1);
         }
-        
+
         modelo.removeAllElements();
         for (Comida c : lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
@@ -206,13 +209,16 @@ public class PrimerPlato1 extends javax.swing.JInternalFrame {
                     aux++;
                 }
                 if (aux == lista.size()) {
+                    comida2.setCantidad(comida2.getCantidad() + 1);
                     lista.add(comida2);
+                    break;
                 }
             }
         } else {
+            comida2.setCantidad(comida2.getCantidad() + 1);
             lista.add(comida2);
         }
-        
+
         modelo.removeAllElements();
         for (Comida c : lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
@@ -230,13 +236,16 @@ public class PrimerPlato1 extends javax.swing.JInternalFrame {
                     aux++;
                 }
                 if (aux == lista.size()) {
+                    comida3.setCantidad(comida3.getCantidad() + 1);
                     lista.add(comida3);
+                    break;
                 }
             }
         } else {
+            comida3.setCantidad(comida3.getCantidad() + 1);
             lista.add(comida3);
         }
-        
+
         modelo.removeAllElements();
         for (Comida c : lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
@@ -244,16 +253,82 @@ public class PrimerPlato1 extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        modelo.addElement(comida4.getNombre());
-    }//GEN-LAST:event_jButton4ActionPerformed
+        int aux = 0;
+        if (lista.size() > 0) {
+            for (Comida c : lista) {
+                if (c.getNombre().equals(comida4.getNombre())) {
+                    c.setCantidad(c.getCantidad() + 1);
+                    break;
+                } else {
+                    aux++;
+                }
+                if (aux == lista.size()) {
+                    comida4.setCantidad(comida4.getCantidad() + 1);
+                    lista.add(comida4);
+                    break;
+                }
+            }
+        } else {
+            comida4.setCantidad(comida4.getCantidad() + 1);
+            lista.add(comida4);
+        }
+        modelo.removeAllElements();
+        for (Comida c : lista) {
+            modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
+        }
+     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        modelo.addElement(comida5.getNombre());
-    }//GEN-LAST:event_jButton5ActionPerformed
+        int aux = 0;
+        if (lista.size() > 0) {
+            for (Comida c : lista) {
+                if (c.getNombre().equals(comida5.getNombre())) {
+                    c.setCantidad(c.getCantidad() + 1);
+                    break;
+                } else {
+                    aux++;
+                }
+                if (aux == lista.size()) {
+                    comida5.setCantidad(comida5.getCantidad() + 1);
+                    lista.add(comida5);
+                    break;
+                }
+            }
+        } else {
+            comida5.setCantidad(comida5.getCantidad() + 1);
+            lista.add(comida5);
+        }
+        modelo.removeAllElements();
+        for (Comida c : lista) {
+            modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
+        }
+     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        modelo.addElement(comida6.getNombre());
-    }//GEN-LAST:event_jButton6ActionPerformed
+        int aux = 0;
+        if (lista.size() > 0) {
+            for (Comida c : lista) {
+                if (c.getNombre().equals(comida6.getNombre())) {
+                    c.setCantidad(c.getCantidad() + 1);
+                    break;
+                } else {
+                    aux++;
+                }
+                if (aux == lista.size()) {
+                    comida6.setCantidad(comida6.getCantidad() + 1);
+                    lista.add(comida6);
+                    break;
+                }
+            }
+        } else {
+            comida6.setCantidad(comida6.getCantidad() + 1);
+            lista.add(comida6);
+        }
+        modelo.removeAllElements();
+        for (Comida c : lista) {
+            modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
+        }
+     }//GEN-LAST:event_jButton6ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

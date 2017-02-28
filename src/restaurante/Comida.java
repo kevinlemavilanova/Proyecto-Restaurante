@@ -12,12 +12,11 @@ package restaurante;
 public class Comida {
     private String nombre;
     private Float precio;
-    private int cantidad = 1;
+    private int cantidad = 0;
     
     public Comida(String nombre, Float precio) {
         this.nombre = nombre;
         this.precio = precio;
-        this.cantidad = cantidad;
     }
 
     public void setCantidad(int cantidad) {

@@ -2,6 +2,7 @@ package restaurante;
 
 import java.awt.Component;
 import restaurante.Pedidos.ListaDeMesas;
+import restaurante.Pedidos.PrimerPlato1;
 
 public class Principal extends javax.swing.JInternalFrame {
 
@@ -79,6 +80,11 @@ public class Principal extends javax.swing.JInternalFrame {
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton7.setIconTextGap(-3);
         jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 180, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Imagenes/Fondo.png"))); // NOI18N
@@ -96,6 +102,13 @@ public class Principal extends javax.swing.JInternalFrame {
         p1.show();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        PrimerPlato1 p1 = new PrimerPlato1();
+        Panel.add(p1);
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)p1.getUI()).setNorthPane(null);
+        p1.show();    }//GEN-LAST:event_jButton7ActionPerformed
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane Panel;
