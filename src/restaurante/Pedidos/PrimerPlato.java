@@ -21,12 +21,12 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     public PrimerPlato() {
         initComponents();
     }
-    Comida comida1 = new Comida("Pasta", 3.4f);
-    Comida comida2 = new Comida("comida2", 3.4f);
-    Comida comida3 = new Comida("comida3", 3.4f);
-    Comida comida4 = new Comida("comida4", 3.4f);
-    Comida comida5 = new Comida("comida5", 3.4f);
-    Comida comida6 = new Comida("comida6", 3.4f);
+    Comida comida1 = new Comida("Pasta con tomate", 0);
+    Comida comida2 = new Comida("Sopa de zanahoria", 0);
+    Comida comida3 = new Comida("Empanada de pollo", 0);
+    Comida comida4 = new Comida("Callos", 0);
+    Comida comida5 = new Comida("Tortilla de patata", 0);
+    Comida comida6 = new Comida("Espinacas", 0);
     ArrayList<Comida> lista = new ArrayList<Comida>();
 
     @SuppressWarnings("unchecked")

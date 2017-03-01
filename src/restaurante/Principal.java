@@ -1,14 +1,152 @@
 package restaurante;
 
 import java.awt.Component;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.logging.Logger;
 import restaurante.Pedidos.ListaDeMesas;
 import restaurante.Pedidos.PrimerPlato;
 
 public class Principal extends javax.swing.JInternalFrame {
 
+    public static ArrayList<Pedido> TotalPedidos = new ArrayList<Pedido>();
 
     public Principal() {
         initComponents();
+        cargarPedidos();
+    }
+
+    public void cargarPedidos() {
+
+        File ar = new File("C:\\Users\\christian\\Documents\\NetBeansProjects\\Restaurante\\src\\aplicacion\\Pedidos\\ListaPedidos.txt");
+        Scanner sc;
+        try {
+            sc = new Scanner(ar);
+            while (sc.hasNextLine()) {
+                String textoPedido = sc.nextLine();
+                cargarPedido(textoPedido);
+            }
+            sc.close();
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger("No se ha podido encontrar el archivo");
+        }
+    }
+
+    public void cargarPedido(String lineaPedido) {
+
+        
+        String[] atributosPedidos = lineaPedido.split("--");
+
+        String[] primerPlato = atributosPedidos[1].split("\\*");
+        Comida[] comidaPP = new Comida[primerPlato.length];
+
+        for (int i = 0; i < primerPlato.length; i++) {
+            int inicio = primerPlato[i].indexOf(".");
+            int fin = inicio + 2;
+
+            comidaPP[i] = new Comida(primerPlato[i].substring(0, inicio), Integer.parseInt(primerPlato[i].substring(inicio + 1, fin)));
+
+        }
+
+        String[] segundoPlato = atributosPedidos[2].split("\\*");
+        Comida[] comidaSP = new Comida[segundoPlato.length];
+
+        for (int i = 0; i < segundoPlato.length; i++) {
+            int inicio = segundoPlato[i].indexOf(".");
+            int fin = inicio + 2;
+
+            comidaSP[i] = new Comida(segundoPlato[i].substring(0, inicio), Integer.parseInt(segundoPlato[i].substring(inicio + 1, fin)));
+
+        }
+
+        //
+        String[] postre = atributosPedidos[3].split("\\*");
+
+        Comida[] comidaPostre = new Comida[postre.length];
+
+        for (int i = 0; i < postre.length; i++) {
+            int inicio = postre[i].indexOf(".");
+            int fin = inicio + 2;
+
+            comidaPostre[i] = new Comida(postre[i].substring(0, inicio), Integer.parseInt(postre[i].substring(inicio + 1, fin)));
+
+        }
+
+        String[] bebida = atributosPedidos[4].split("\\*");
+
+        Comida[] comidaBebida = new Comida[bebida.length];
+
+        for (int i = 0; i < bebida.length; i++) {
+            int inicio = bebida[i].indexOf(".");
+            int fin = inicio + 2;
+
+            comidaBebida[i] = new Comida(bebida[i].substring(0, inicio), Integer.parseInt(bebida[i].substring(inicio + 1, fin)));
+
+        }
+
+        Pedido PedidoCargado = new Pedido();
+        //Mesa
+        PedidoCargado.setN_mesa(Integer.parseInt(atributosPedidos[0]));
+        //Primer plato
+        ArrayList<Comida> AyudaPP = new ArrayList<Comida>();
+        for (int i = 0; i < primerPlato.length; i++) {
+            AyudaPP.add(comidaPP[i]);
+        }
+        PedidoCargado.setPrimerPlato(AyudaPP);
+        
+        //Segundo plato
+        ArrayList<Comida> AyudaSP = new ArrayList<Comida>();
+        for (int i = 0; i < segundoPlato.length; i++) {
+            AyudaSP.add(comidaSP[i]);
+        }
+        PedidoCargado.setSegundoPlato(AyudaSP);
+        
+        //Postre
+        ArrayList<Comida> AyudaPostre = new ArrayList<Comida>();
+        for (int i = 0; i < postre.length; i++) {
+            AyudaPostre.add(comidaPostre[i]);
+        }
+        PedidoCargado.setPostre(AyudaPostre);
+        
+        //Bebida
+        ArrayList<Comida> AyudaBebida = new ArrayList<Comida>();
+        for (int i = 0; i < bebida.length; i++) {
+            AyudaBebida.add(comidaBebida[i]);
+        }
+        PedidoCargado.setBebida(AyudaBebida);
+        
+        
+        System.out.print(PedidoCargado.toString());
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -98,7 +236,7 @@ public class Principal extends javax.swing.JInternalFrame {
         ListaDeMesas p1 = new ListaDeMesas();
         Panel.add(p1);
         p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI)p1.getUI()).setNorthPane(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -106,9 +244,9 @@ public class Principal extends javax.swing.JInternalFrame {
         PrimerPlato p1 = new PrimerPlato();
         Panel.add(p1);
         p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI)p1.getUI()).setNorthPane(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();    }//GEN-LAST:event_jButton7ActionPerformed
- 
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane Panel;

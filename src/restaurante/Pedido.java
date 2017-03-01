@@ -1,32 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package restaurante;
-
 import java.util.ArrayList;
+import restaurante.Comida;
 
-/**
- *
- * @author kevin
- */
 public class Pedido {
     int n_mesa;
-    ArrayList primerplato = new ArrayList();
-    ArrayList segundoplato = new ArrayList();
-    ArrayList postre = new ArrayList();
-    ArrayList bebida = new ArrayList();
+    ArrayList<Comida> primerPlato;
+    ArrayList<Comida> segundoPlato;
+    ArrayList<Comida> postre;
+    ArrayList<Comida> bebida;
+    int precioPedido;
 
     public Pedido() {
+        
     }
-    
+
     public void escogerPrimerPlato(Comida c) {
-        primerplato.add(c);
+        primerPlato.add(c);
     }
     
     public void escogerSegundoPlato(Comida c) {
-        segundoplato.add(c);
+        segundoPlato.add(c);
     }
     
     public void escogerPostre(Comida c) {
@@ -37,4 +30,64 @@ public class Pedido {
         bebida.add(c);
     }
     
+    public void añadirPedido(Pedido p){
+        Principal.TotalPedidos.add(p);
+    }
+
+    @Override
+    public String toString() {
+        return "Pedido{" + "n_mesa=" + n_mesa + ", primerPlato=" + primerPlato + ", segundoPlato=" + segundoPlato + ", postre=" + postre + ", bebida=" + bebida + ", precioPedido=" + precioPedido + '}';
+    }
+    
+    
+    
+    ///////////////////////////////////////////////Setters y Getters////////////////////////////////////////////////////////
+    public int getN_mesa() {
+        return n_mesa;
+    }
+
+    public void setN_mesa(int n_mesa) {
+        this.n_mesa = n_mesa;
+    }
+
+    public ArrayList getPrimerPlato() {
+        return primerPlato;
+    }
+
+    public void setPrimerPlato(ArrayList primerPlato) {
+        this.primerPlato = primerPlato;
+    }
+
+    public ArrayList getSegundoPlato() {
+        return segundoPlato;
+    }
+
+    public void setSegundoPlato(ArrayList segundoPlato) {
+        this.segundoPlato = segundoPlato;
+    }
+
+    public ArrayList getPostre() {
+        return postre;
+    }
+
+    public void setPostre(ArrayList postre) {
+        this.postre = postre;
+    }
+
+    public ArrayList getBebida() {
+        return bebida;
+    }
+
+    public void setBebida(ArrayList bebida) {
+        this.bebida = bebida;
+    }
+
+    public int getPrecioPedido() {
+        return precioPedido;
+    }
+
+    public void setPrecioPedido(int precioPedido) {
+        this.precioPedido = precioPedido;
+    }
+
 }
