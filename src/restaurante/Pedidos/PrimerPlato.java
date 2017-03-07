@@ -40,9 +40,11 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        Panel = new javax.swing.JScrollPane();
         modelo=new DefaultListModel();
-        jList1 = new javax.swing.JList<>();
+        jList1 = new javax.swing.JList<String>();
         jLabel2 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
@@ -63,7 +65,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         jButton5.setBorder(null);
         jButton5.setBorderPainted(false);
         jButton5.setContentAreaFilled(false);
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton5.setIconTextGap(-3);
         jButton5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Comida/TortillaP.png"))); // NOI18N
@@ -83,7 +85,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setIconTextGap(-3);
         jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Comida/PastaConTomateP.png"))); // NOI18N
@@ -103,7 +105,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         jButton4.setBorder(null);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton4.setIconTextGap(-3);
         jButton4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Comida/CallosP.png"))); // NOI18N
@@ -123,7 +125,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setIconTextGap(-3);
         jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Comida/SopaDeZanahoriaP.png"))); // NOI18N
@@ -143,7 +145,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         jButton6.setBorder(null);
         jButton6.setBorderPainted(false);
         jButton6.setContentAreaFilled(false);
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton6.setIconTextGap(-3);
         jButton6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Comida/EspinacasP.png"))); // NOI18N
@@ -163,7 +165,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setIconTextGap(-3);
         jButton3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Comida/EmpanadaP.png"))); // NOI18N
@@ -176,10 +178,26 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 210, 240));
 
-        jList1.setModel(modelo);
-        jScrollPane2.setViewportView(jList1);
+        jButton8.setText("Atras");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 620, -1, -1));
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, 170, 420));
+        jButton9.setText("Siguiente");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 620, -1, -1));
+
+        jList1.setModel(modelo);
+        Panel.setViewportView(jList1);
+
+        getContentPane().add(Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, 170, 370));
 
         jLabel2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -194,12 +212,12 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         String value = jList1.getSelectedValue().substring(4, jList1.getSelectedValue().length());
-        for(Comida c : lista){
+        for (Comida c : lista) {
             String cnombre = c.getNombre();
-            if(cnombre.equals(value)) {
+            if (cnombre.equals(value)) {
             } else {
-                c.setCantidad(c.getCantidad()-1);
-                if(c.getCantidad() == 0){
+                c.setCantidad(c.getCantidad() - 1);
+                if (c.getCantidad() == 0) {
                     lista.remove(c);
                 }
                 break;
@@ -208,8 +226,8 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         modelo.removeAllElements();
         for (Comida c : lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
-        }        
-        
+        }
+
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -363,9 +381,30 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }    }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        SegundoPlato p1 = new SegundoPlato();
+        p1.lista = lista;
+        
+        Panel.add(p1);
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        ListaDeMesas p1 = new ListaDeMesas();
+        p1.lista = lista;
+        
+        Panel.add(p1);
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
+    }//GEN-LAST:event_jButton8ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
+    private javax.swing.JScrollPane Panel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -373,9 +412,10 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JList<String> jList1;
     private DefaultListModel modelo;
-    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

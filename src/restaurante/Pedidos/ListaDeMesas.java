@@ -1,6 +1,7 @@
-
 package restaurante.Pedidos;
 
+import java.util.ArrayList;
+import restaurante.Comida;
 import restaurante.Pedido;
 
 public class ListaDeMesas extends javax.swing.JInternalFrame {
@@ -8,24 +9,14 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     public ListaDeMesas() {
         initComponents();
     }
-    
-    public void DarMesa(Pedido tpedidos[]){
-        
-        
-        for(Pedido i : tpedidos){
-            
+    public ArrayList<Comida> lista = new ArrayList<Comida>();
+
+    public void DarMesa(Pedido tpedidos[]) {
+
+        for (Pedido i : tpedidos) {
+
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
     }
 
     /**
