@@ -47,8 +47,8 @@ public class Principal extends javax.swing.JInternalFrame {
             int inicio = primerPlato[i].indexOf(".");
             int fin = inicio + 2;
 
-            comidaPP[i] = new Comida(primerPlato[i].substring(0, inicio), Integer.parseInt(primerPlato[i].substring(inicio + 1, fin)));
-
+            comidaPP[i] = new Comida(primerPlato[i].substring(0, inicio),0f);
+            comidaPP[i].setCantidad(Integer.parseInt(primerPlato[i].substring(inicio + 1, fin)));
         }
 
         String[] segundoPlato = atributosPedidos[2].split("\\*");
@@ -58,8 +58,8 @@ public class Principal extends javax.swing.JInternalFrame {
             int inicio = segundoPlato[i].indexOf(".");
             int fin = inicio + 2;
 
-            comidaSP[i] = new Comida(segundoPlato[i].substring(0, inicio), Integer.parseInt(segundoPlato[i].substring(inicio + 1, fin)));
-
+            comidaSP[i] = new Comida(segundoPlato[i].substring(0, inicio), 0f);
+            comidaSP[i].setCantidad(Integer.parseInt(segundoPlato[i].substring(inicio + 1, fin)));
         }
 
         //
@@ -71,8 +71,8 @@ public class Principal extends javax.swing.JInternalFrame {
             int inicio = postre[i].indexOf(".");
             int fin = inicio + 2;
 
-            comidaPostre[i] = new Comida(postre[i].substring(0, inicio), Integer.parseInt(postre[i].substring(inicio + 1, fin)));
-
+            comidaPostre[i] = new Comida(postre[i].substring(0, inicio), 0f);
+            comidaPostre[i].setCantidad(Integer.parseInt(postre[i].substring(inicio + 1, fin)));
         }
 
         String[] bebida = atributosPedidos[4].split("\\*");
@@ -83,8 +83,8 @@ public class Principal extends javax.swing.JInternalFrame {
             int inicio = bebida[i].indexOf(".");
             int fin = inicio + 2;
 
-            comidaBebida[i] = new Comida(bebida[i].substring(0, inicio), Integer.parseInt(bebida[i].substring(inicio + 1, fin)));
-
+            comidaBebida[i] = new Comida(bebida[i].substring(0, inicio), 0f);
+            comidaBebida[i].setCantidad(Integer.parseInt(bebida[i].substring(inicio + 1, fin)));
         }
 
         Pedido PedidoCargado = new Pedido();
@@ -128,23 +128,31 @@ public class Principal extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         Panel = new javax.swing.JDesktopPane();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
 
         Panel.setOpaque(false);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Imagenes/Fondo.png"))); // NOI18N
+
+        Panel.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
         Panel.setLayout(PanelLayout);
         PanelLayout.setHorizontalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 920, Short.MAX_VALUE)
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 20, Short.MAX_VALUE))
         );
         PanelLayout.setVerticalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 660, Short.MAX_VALUE)
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Script MT Bold", 3, 60)); // NOI18N
@@ -191,8 +199,6 @@ public class Principal extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Imagenes/Fondo.png"))); // NOI18N
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -209,29 +215,26 @@ public class Principal extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(80, 80, 80)
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(jButton2))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(jButton7))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(jButton8))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(170, 170, 170)
+                        .addComponent(jButton2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(170, 170, 170)
+                        .addComponent(jButton7))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(170, 170, 170)
+                        .addComponent(jButton8))
+                    .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(154, 154, 154))
         );
 
         pack();

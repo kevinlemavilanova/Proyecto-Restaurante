@@ -22,12 +22,12 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     public PrimerPlato() {
         initComponents();
     }
-    Comida comida1 = new Comida("Pasta con tomate", 0);
-    Comida comida2 = new Comida("Sopa de zanahoria", 0);
-    Comida comida3 = new Comida("Empanada de pollo", 0);
-    Comida comida4 = new Comida("Callos", 0);
-    Comida comida5 = new Comida("Tortilla de patata", 0);
-    Comida comida6 = new Comida("Espinacas", 0);
+    Comida comida1 = new Comida("Pasta con tomate", 5.5f);
+    Comida comida2 = new Comida("Sopa de zanahoria", 3.5f);
+    Comida comida3 = new Comida("Empanada de pollo", 2.25f);
+    Comida comida4 = new Comida("Callos", 3.10f);
+    Comida comida5 = new Comida("Tortilla de patata", 2.35f);
+    Comida comida6 = new Comida("Espinacas", 1.20f);
     ArrayList<Comida> lista = new ArrayList<Comida>();
     Funciones a = new Funciones();
 
@@ -48,12 +48,15 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         jButton7 = new javax.swing.JButton();
         list = new javax.swing.JScrollPane();
         modelo=new DefaultListModel();
-        jList1 = new javax.swing.JList<String>();
+        jList1 = new javax.swing.JList<>();
         Fondo = new javax.swing.JLabel();
+
+        Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Pedido/PPlato.png"))); // NOI18N
+        Panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 570, 90));
 
         jButton9.setText("Siguiente");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -61,6 +64,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
                 jButton9ActionPerformed(evt);
             }
         });
+        Panel.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 610, -1, 50));
 
         jButton8.setText("Atras");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -68,6 +72,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
                 jButton8ActionPerformed(evt);
             }
         });
+        Panel.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 610, -1, 50));
 
         jButton6.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,6 +92,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
                 jButton6ActionPerformed(evt);
             }
         });
+        Panel.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, 210, 240));
 
         jButton3.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,6 +112,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        Panel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 210, 240));
 
         jButton2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -125,6 +132,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        Panel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 210, 240));
 
         jButton4.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
@@ -144,6 +152,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+        Panel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 210, 240));
 
         jButton1.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -163,6 +172,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        Panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 210, 240));
 
         jButton5.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
@@ -182,6 +192,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
                 jButton5ActionPerformed(evt);
             }
         });
+        Panel.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 210, 240));
 
         jButton7.setText("Eliminar");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -189,83 +200,15 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
                 jButton7ActionPerformed(evt);
             }
         });
+        Panel.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, -1, -1));
 
         jList1.setModel(modelo);
         list.setViewportView(jList1);
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Imagenes/Fondo.png"))); // NOI18N
+        Panel.add(list, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 170, 410));
 
-        javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
-        Panel.setLayout(PanelLayout);
-        PanelLayout.setHorizontalGroup(
-            PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton7)
-                    .addComponent(list, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(PanelLayout.createSequentialGroup()
-                        .addComponent(jButton8)
-                        .addGap(41, 41, 41)
-                        .addComponent(jButton9))))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 901, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        PanelLayout.setVerticalGroup(
-            PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(jButton7)
-                .addGap(7, 7, 7)
-                .addComponent(list, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton8)
-                    .addComponent(jButton9)))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        Panel.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton9, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton6, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(list, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(Fondo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Imagenes/Fondo.png"))); // NOI18N
+        Panel.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 901, 720));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

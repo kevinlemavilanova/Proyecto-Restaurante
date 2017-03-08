@@ -1,5 +1,7 @@
 package restaurante.Pedidos;
 
+import restaurante.Pedidos.ListaDeMesas;
+
 public class Bebidas extends javax.swing.JInternalFrame {
 
     /**
@@ -24,6 +26,7 @@ public class Bebidas extends javax.swing.JInternalFrame {
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        btnCompletado = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
@@ -149,6 +152,14 @@ public class Bebidas extends javax.swing.JInternalFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 210, 240));
 
+        btnCompletado.setText("Completar pedido");
+        btnCompletado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCompletadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCompletado, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 620, 120, 40));
+
         jLabel2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Bebidas/cooltext233511918247090.png"))); // NOI18N
@@ -184,9 +195,18 @@ public class Bebidas extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btnCompletadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompletadoActionPerformed
+        
+        //Bebidas
+        
+        
+        
+    }//GEN-LAST:event_btnCompletadoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
+    private javax.swing.JButton btnCompletado;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

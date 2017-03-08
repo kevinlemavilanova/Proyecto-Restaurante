@@ -14,9 +14,9 @@ public class Comida {
     private Float precio;
     private int cantidad = 0;
     
-    public Comida(String nombre, int cantidad) {
+    public Comida(String nombre, Float precio) {
         this.nombre = nombre;
-        this.cantidad = cantidad;
+        this.precio = precio;
     }
 
     public void setCantidad(int cantidad) {
