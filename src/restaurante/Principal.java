@@ -120,33 +120,7 @@ public class Principal extends javax.swing.JInternalFrame {
         
         
         System.out.print(PedidoCargado.toString());
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+   
     }
 
     @SuppressWarnings("unchecked")

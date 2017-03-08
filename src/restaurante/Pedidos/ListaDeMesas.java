@@ -9,7 +9,9 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     public ListaDeMesas() {
         initComponents();
     }
+    public Pedido nuevoPedido = new Pedido();
     public ArrayList<Comida> lista = new ArrayList<Comida>();
+    PrimerPlato p1 = new PrimerPlato();
 
     public void DarMesa(Pedido tpedidos[]) {
 
@@ -28,6 +30,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         btnM9 = new javax.swing.JButton();
         btnM8 = new javax.swing.JButton();
         btnM7 = new javax.swing.JButton();
@@ -46,12 +49,15 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
         setResizable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setOpaque(false);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 760));
+
         btnM9.setBackground(new java.awt.Color(0, 0, 0));
         btnM9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/Mesa (9).png"))); // NOI18N
         btnM9.setBorder(null);
         btnM9.setBorderPainted(false);
         btnM9.setContentAreaFilled(false);
-        btnM9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnM9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnM9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnM9.setIconTextGap(-3);
         btnM9.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/MesaP (9).png"))); // NOI18N
@@ -69,7 +75,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
         btnM8.setBorder(null);
         btnM8.setBorderPainted(false);
         btnM8.setContentAreaFilled(false);
-        btnM8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnM8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnM8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnM8.setIconTextGap(-3);
         btnM8.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/MesaP (8).png"))); // NOI18N
@@ -87,7 +93,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
         btnM7.setBorder(null);
         btnM7.setBorderPainted(false);
         btnM7.setContentAreaFilled(false);
-        btnM7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnM7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnM7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnM7.setIconTextGap(-3);
         btnM7.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/MesaP (7).png"))); // NOI18N
@@ -105,7 +111,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
         btnM6.setBorder(null);
         btnM6.setBorderPainted(false);
         btnM6.setContentAreaFilled(false);
-        btnM6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnM6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnM6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnM6.setIconTextGap(-3);
         btnM6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/MesaP (6).png"))); // NOI18N
@@ -123,7 +129,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
         btnM5.setBorder(null);
         btnM5.setBorderPainted(false);
         btnM5.setContentAreaFilled(false);
-        btnM5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnM5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnM5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnM5.setIconTextGap(-3);
         btnM5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/MesaP (5).png"))); // NOI18N
@@ -141,7 +147,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
         btnM4.setBorder(null);
         btnM4.setBorderPainted(false);
         btnM4.setContentAreaFilled(false);
-        btnM4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnM4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnM4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnM4.setIconTextGap(-3);
         btnM4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/MesaP (4).png"))); // NOI18N
@@ -159,7 +165,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
         btnM3.setBorder(null);
         btnM3.setBorderPainted(false);
         btnM3.setContentAreaFilled(false);
-        btnM3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnM3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnM3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnM3.setIconTextGap(-3);
         btnM3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/MesaP (3).png"))); // NOI18N
@@ -177,7 +183,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
         btnM2.setBorder(null);
         btnM2.setBorderPainted(false);
         btnM2.setContentAreaFilled(false);
-        btnM2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnM2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnM2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnM2.setIconTextGap(-3);
         btnM2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/MesaP (2).png"))); // NOI18N
@@ -195,7 +201,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
         btnM1.setBorder(null);
         btnM1.setBorderPainted(false);
         btnM1.setContentAreaFilled(false);
-        btnM1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnM1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnM1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnM1.setIconTextGap(-3);
         btnM1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/MesaP (1).png"))); // NOI18N
@@ -221,40 +227,75 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnM8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM8ActionPerformed
-        // TODO add your handling code here:
+        nuevoPedido.setN_mesa(8);
+        p1.lista = lista;
+        jPanel1.add(p1);
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
     }//GEN-LAST:event_btnM8ActionPerformed
 
     private void btnM9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM9ActionPerformed
-        // TODO add your handling code here:
+        nuevoPedido.setN_mesa(9);
+        p1.lista = lista;
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
     }//GEN-LAST:event_btnM9ActionPerformed
 
     private void btnM6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM6ActionPerformed
-        // TODO add your handling code here:
+        nuevoPedido.setN_mesa(6);
+        p1.lista = lista;
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
     }//GEN-LAST:event_btnM6ActionPerformed
 
     private void btnM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnM7ActionPerformed
+        nuevoPedido.setN_mesa(7);
+        p1.lista = lista;
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();    }//GEN-LAST:event_btnM7ActionPerformed
 
     private void btnM4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM4ActionPerformed
-        // TODO add your handling code here:
+        nuevoPedido.setN_mesa(4);
+        p1.lista = lista;
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
     }//GEN-LAST:event_btnM4ActionPerformed
 
     private void btnM5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM5ActionPerformed
-        // TODO add your handling code here:
+        nuevoPedido.setN_mesa(5);
+        p1.lista = lista;
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
     }//GEN-LAST:event_btnM5ActionPerformed
 
     private void btnM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM3ActionPerformed
-        // TODO add your handling code here:
+        nuevoPedido.setN_mesa(3);
+        p1.lista = lista;
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
     }//GEN-LAST:event_btnM3ActionPerformed
 
     private void btnM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM1ActionPerformed
-        // TODO add your handling code here:
+        nuevoPedido.setN_mesa(1);
+        p1.lista = lista;
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
     }//GEN-LAST:event_btnM1ActionPerformed
 
     private void btnM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnM2ActionPerformed
+        nuevoPedido.setN_mesa(2);
+        p1.lista = lista;
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();    }//GEN-LAST:event_btnM2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -270,5 +311,6 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnM8;
     private javax.swing.JButton btnM9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
