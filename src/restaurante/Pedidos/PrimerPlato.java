@@ -5,11 +5,11 @@
  */
 package restaurante.Pedidos;
 
-
 import java.util.ArrayList;
 import restaurante.Comida;
 import javax.swing.DefaultListModel;
 import restaurante.Funciones;
+
 /**
  *
  * @author christian
@@ -225,11 +225,10 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        String value = jList1.getSelectedValue().substring(4, jList1.getSelectedValue().length());
+        String value = jList1.getSelectedValue().substring(5, jList1.getSelectedValue().length());
         for (Comida c : lista) {
             String cnombre = c.getNombre();
-            if (cnombre.equals(value)) {
-            } else {
+            if (value.equals(cnombre)) {
                 c.setCantidad(c.getCantidad() - 1);
                 if (c.getCantidad() == 0) {
                     lista.remove(c);
@@ -398,7 +397,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         SegundoPlato p1 = new SegundoPlato();
         p1.lista = lista;
-        
+
         Panel.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -408,7 +407,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         ListaDeMesas p1 = new ListaDeMesas();
         p1.lista = lista;
-        
+
         Panel.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
