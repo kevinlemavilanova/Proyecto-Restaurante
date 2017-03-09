@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import restaurante.Comida;
 import restaurante.Funciones;
+import restaurante.Intro;
 import restaurante.Pedidos.ListaDeMesas;
 
 public class Bebidas extends javax.swing.JInternalFrame {
@@ -15,14 +16,15 @@ public class Bebidas extends javax.swing.JInternalFrame {
         initComponents();
     }
     Comida comida1 = new Comida("Agua", 1f);
-    Comida comida2 = new Comida("Chuletillas de cerdo", 6.25f);
-    Comida comida3 = new Comida("Salmon", 5.30f);
-    Comida comida4 = new Comida("Gnocchis de patata", 4.75f);
+    Comida comida2 = new Comida("Coca Cola", 2.5f);
+    Comida comida3 = new Comida("Fanta", 2f);
+    Comida comida4 = new Comida("Nestea", 2f);
     Comida comida5 = new Comida("7up", 1.5f);
     Comida comida6 = new Comida("Vino", 3.5f);
     public ArrayList<Comida> lista = new ArrayList<Comida>();
     Funciones a = new Funciones();
-
+    Intro intro = new Intro();
+    
     public DefaultListModel getModelo() {
         return modelo;
     }
@@ -51,12 +53,9 @@ public class Bebidas extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(900, 770));
 
         Panel.setPreferredSize(new java.awt.Dimension(900, 770));
-        Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jList1.setModel(modelo);
         list.setViewportView(jList1);
-
-        Panel.add(list, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 170, 410));
 
         jButton9.setText("Siguiente");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +63,6 @@ public class Bebidas extends javax.swing.JInternalFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        Panel.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 610, -1, 50));
 
         jButton8.setText("Atras");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -72,7 +70,6 @@ public class Bebidas extends javax.swing.JInternalFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        Panel.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 610, -1, 50));
 
         jButton7.setText("Eliminar");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +77,6 @@ public class Bebidas extends javax.swing.JInternalFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        Panel.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, -1, -1));
 
         jButton4.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
@@ -99,7 +95,6 @@ public class Bebidas extends javax.swing.JInternalFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        Panel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 210, 240));
 
         jButton1.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -118,12 +113,10 @@ public class Bebidas extends javax.swing.JInternalFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        Panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 210, 240));
 
         jLabel2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Bebidas/cooltext233511918247090.png"))); // NOI18N
-        Panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 290, 100));
 
         jButton3.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,7 +135,6 @@ public class Bebidas extends javax.swing.JInternalFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        Panel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 210, 240));
 
         jButton6.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
@@ -161,7 +153,6 @@ public class Bebidas extends javax.swing.JInternalFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        Panel.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, 210, 240));
 
         jButton5.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
@@ -180,7 +171,6 @@ public class Bebidas extends javax.swing.JInternalFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        Panel.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 210, 240));
 
         jButton2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -199,10 +189,81 @@ public class Bebidas extends javax.swing.JInternalFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        Panel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 210, 240));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Imagenes/Fondo.png"))); // NOI18N
-        Panel.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 710));
+        Fondo.setPreferredSize(new java.awt.Dimension(900, 770));
+
+        javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
+        Panel.setLayout(PanelLayout);
+        PanelLayout.setHorizontalGroup(
+            PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(210, 210, 210)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButton7))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(450, 450, 450)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButton8)
+                .addGap(31, 31, 31)
+                .addComponent(jButton9))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(240, 240, 240)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(240, 240, 240)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(690, 690, 690)
+                .addComponent(list, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        PanelLayout.setVerticalGroup(
+            PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton7)
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(20, 20, 20)
+                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(410, 410, 410)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(410, 410, 410)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(list, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -245,7 +306,8 @@ public class Bebidas extends javax.swing.JInternalFrame {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         Bebidas p1 = new Bebidas();
         p1.lista = lista;
-        Panel.add(p1);
+        this.hide();
+        intro.principal.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -254,8 +316,8 @@ public class Bebidas extends javax.swing.JInternalFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         SegundoPlato p1 = new SegundoPlato();
         p1.lista = lista;
-
-        Panel.add(p1);
+        this.hide();
+        intro.principal.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();

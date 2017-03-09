@@ -1,11 +1,11 @@
 package restaurante;
 
-import java.awt.Component;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Logger;
+import javax.swing.JPanel;
 import restaurante.Pedidos.ListaDeMesas;
 import restaurante.Pedidos.PrimerPlato;
 
@@ -17,6 +17,15 @@ public class Principal extends javax.swing.JInternalFrame {
         initComponents();
         cargarPedidos();
     }
+
+    public JPanel getPanel2() {
+        return Panel2;
+    }
+
+    public void setPanel2(JPanel Panel2) {
+        this.Panel2 = Panel2;
+    }
+    
 
     public void cargarPedidos() {
 
@@ -133,6 +142,10 @@ public class Principal extends javax.swing.JInternalFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        Panel2 = new javax.swing.JPanel();
+
+        setPreferredSize(new java.awt.Dimension(900, 770));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Panel.setOpaque(false);
 
@@ -219,21 +232,23 @@ public class Principal extends javax.swing.JInternalFrame {
             .addGroup(PanelLayout.createSequentialGroup()
                 .addGap(180, 180, 180)
                 .addComponent(jButton7))
-            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        getContentPane().add(Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        javax.swing.GroupLayout Panel2Layout = new javax.swing.GroupLayout(Panel2);
+        Panel2.setLayout(Panel2Layout);
+        Panel2Layout.setHorizontalGroup(
+            Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 900, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(142, 142, 142))
+        Panel2Layout.setVerticalGroup(
+            Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
         );
+
+        getContentPane().add(Panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -241,7 +256,8 @@ public class Principal extends javax.swing.JInternalFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         ListaDeMesas p1 = new ListaDeMesas();
-        Panel.add(p1);
+        Panel.setVisible(false);
+        Panel2.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -249,7 +265,8 @@ public class Principal extends javax.swing.JInternalFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         PrimerPlato p1 = new PrimerPlato();
-        Panel.add(p1);
+        Panel.setVisible(false);
+        Panel2.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();    }//GEN-LAST:event_jButton7ActionPerformed
@@ -257,6 +274,7 @@ public class Principal extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane Panel;
+    public javax.swing.JPanel Panel2;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;

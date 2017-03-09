@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import restaurante.Comida;
 import javax.swing.DefaultListModel;
 import restaurante.Funciones;
+import restaurante.Intro;
 
 /**
  *
@@ -32,6 +33,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     Comida comida6 = new Comida("Espinacas", 1.20f);
     ArrayList<Comida> lista = new ArrayList<Comida>();
     Funciones a = new Funciones();
+    Intro intro = new Intro();
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -214,34 +216,33 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(240, 240, 240)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(690, 690, 690)
-                .addComponent(jButton8))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(690, 690, 690)
-                .addComponent(jButton7))
-            .addGroup(PanelLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(450, 450, 450)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(690, 690, 690)
-                .addComponent(list, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(210, 210, 210)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButton7))
             .addGroup(PanelLayout.createSequentialGroup()
                 .addGap(780, 780, 780)
                 .addComponent(jButton9))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(240, 240, 240)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(450, 450, 450)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(PanelLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(PanelLayout.createSequentialGroup()
                 .addGap(240, 240, 240)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(690, 690, 690)
+                .addComponent(jButton8))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(690, 690, 690)
+                .addComponent(list, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         PanelLayout.setVerticalGroup(
@@ -249,33 +250,34 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
             .addGroup(PanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(30, 30, 30)
                 .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton7)
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(220, 220, 220)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(jButton7))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(410, 410, 410)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(PanelLayout.createSequentialGroup()
                 .addGap(410, 410, 410)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(list, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(610, 610, 610)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
                 .addGap(410, 410, 410)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(410, 410, 410)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(150, 150, 150)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(610, 610, 610)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(list, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
@@ -467,7 +469,9 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         SegundoPlato p1 = new SegundoPlato();
         p1.lista = lista;
         a.cargarLista(lista, p1.getModelo());
-        Panel.add(p1);
+        intro.principal.Panel2.removeAll();
+        intro.principal.Panel2.add(p1);
+        intro.principal.repaint();
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -476,7 +480,9 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         ListaDeMesas p1 = new ListaDeMesas();
         p1.lista = lista;
-        Panel.add(p1);
+        intro.principal.Panel2.removeAll();
+        intro.principal.Panel2.add(p1);
+        intro.principal.repaint();
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
