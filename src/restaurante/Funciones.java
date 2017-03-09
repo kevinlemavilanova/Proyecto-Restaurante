@@ -39,5 +39,6 @@ public class Funciones {
         modelo.removeAllElements();
         for (Comida c : lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
-        }    }
+        }    
+    }
 }

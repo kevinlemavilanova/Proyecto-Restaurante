@@ -23,6 +23,10 @@ public class Bebidas extends javax.swing.JInternalFrame {
     public ArrayList<Comida> lista = new ArrayList<Comida>();
     Funciones a = new Funciones();
 
+    public DefaultListModel getModelo() {
+        return modelo;
+    }
+    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -44,6 +48,9 @@ public class Bebidas extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(900, 770));
+
+        Panel.setPreferredSize(new java.awt.Dimension(900, 770));
         Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jList1.setModel(modelo);

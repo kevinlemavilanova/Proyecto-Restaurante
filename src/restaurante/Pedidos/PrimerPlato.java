@@ -16,12 +16,14 @@ import restaurante.Funciones;
  */
 public class PrimerPlato extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form MenuPedidos
-     */
     public PrimerPlato() {
         initComponents();
     }
+
+    public DefaultListModel getModelo() {
+        return modelo;
+    }
+    
     Comida comida1 = new Comida("Pasta con tomate", 5.5f);
     Comida comida2 = new Comida("Sopa de zanahoria", 3.5f);
     Comida comida3 = new Comida("Empanada de pollo", 2.25f);
@@ -50,6 +52,8 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         modelo=new DefaultListModel();
         jList1 = new javax.swing.JList<>();
         Fondo = new javax.swing.JLabel();
+
+        setPreferredSize(new java.awt.Dimension(900, 770));
 
         jLabel2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -238,7 +242,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
             .addGroup(PanelLayout.createSequentialGroup()
                 .addGap(240, 240, 240)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 901, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         PanelLayout.setVerticalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,7 +276,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
             .addGroup(PanelLayout.createSequentialGroup()
                 .addGap(410, 410, 410)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -462,7 +466,7 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         SegundoPlato p1 = new SegundoPlato();
         p1.lista = lista;
-
+        a.cargarLista(lista, p1.getModelo());
         Panel.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -472,7 +476,6 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         ListaDeMesas p1 = new ListaDeMesas();
         p1.lista = lista;
-
         Panel.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
