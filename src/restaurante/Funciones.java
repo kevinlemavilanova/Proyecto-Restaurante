@@ -9,7 +9,7 @@ import javax.swing.DefaultListModel;
  */
 public class Funciones {
 
-    public void seleccionarProducto(ArrayList<Comida> lista, Comida comida, DefaultListModel modelo){
+    public void seleccionarProducto(ArrayList<Comida> lista, Comida comida, DefaultListModel modelo) {
         int aux = 0;
         if (lista.size() > 0) {
             for (Comida c : lista) {
@@ -32,7 +32,12 @@ public class Funciones {
         modelo.removeAllElements();
         for (Comida c : lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
-        }    }   
+        }
     }
-    
 
+    public void cargarLista(ArrayList<Comida> lista, DefaultListModel modelo) {
+        modelo.removeAllElements();
+        for (Comida c : lista) {
+            modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
+        }    }
+}

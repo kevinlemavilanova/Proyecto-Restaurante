@@ -1,7 +1,9 @@
 package restaurante.Pedidos;
 
 import java.util.ArrayList;
+import javax.swing.DefaultListModel;
 import restaurante.Comida;
+import restaurante.Funciones;
 import restaurante.Pedido;
 
 public class ListaDeMesas extends javax.swing.JInternalFrame {
@@ -12,7 +14,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     public Pedido nuevoPedido = new Pedido();
     public ArrayList<Comida> lista = new ArrayList<Comida>();
     PrimerPlato p1 = new PrimerPlato();
-
+    Funciones a = new Funciones();
     public void DarMesa(Pedido tpedidos[]) {
 
         for (Pedido i : tpedidos) {
@@ -238,7 +240,9 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     private void btnM9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM9ActionPerformed
         nuevoPedido.setN_mesa(9);
         p1.lista = lista;
+        jPanel1.add(p1);
         p1.setBorder(null);
+        
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_btnM9ActionPerformed
@@ -246,6 +250,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     private void btnM6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM6ActionPerformed
         nuevoPedido.setN_mesa(6);
         p1.lista = lista;
+        jPanel1.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -254,6 +259,8 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     private void btnM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM7ActionPerformed
         nuevoPedido.setN_mesa(7);
         p1.lista = lista;
+        jPanel1.add(p1);
+        jPanel1.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();    }//GEN-LAST:event_btnM7ActionPerformed
@@ -261,6 +268,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     private void btnM4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM4ActionPerformed
         nuevoPedido.setN_mesa(4);
         p1.lista = lista;
+        jPanel1.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -269,6 +277,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     private void btnM5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM5ActionPerformed
         nuevoPedido.setN_mesa(5);
         p1.lista = lista;
+        jPanel1.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -277,6 +286,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     private void btnM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM3ActionPerformed
         nuevoPedido.setN_mesa(3);
         p1.lista = lista;
+        jPanel1.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -285,6 +295,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     private void btnM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM1ActionPerformed
         nuevoPedido.setN_mesa(1);
         p1.lista = lista;
+        jPanel1.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -293,6 +304,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
     private void btnM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM2ActionPerformed
         nuevoPedido.setN_mesa(2);
         p1.lista = lista;
+        jPanel1.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();    }//GEN-LAST:event_btnM2ActionPerformed
