@@ -470,7 +470,10 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         p1.lista = lista;
         a.cargarLista(lista, p1.getModelo());
         Intro.principal.PanelSegundo.setVisible(false);
-        Intro.principal.PanelTercero.add(p1);
+        if (Intro.principal.PanelTercero.getComponentCount() == 0){
+            Intro.principal.PanelTercero.add(p1);
+        }
+        Intro.principal.PanelTercero.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
