@@ -49,6 +49,7 @@ public class Funciones {
         }
         Principal.atras = false;
         Intro.principal.PanelPrimero.setVisible(false);
+        Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
