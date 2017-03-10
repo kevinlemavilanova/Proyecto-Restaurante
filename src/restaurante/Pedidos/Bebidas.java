@@ -48,13 +48,17 @@ public class Bebidas extends javax.swing.JInternalFrame {
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        Fondo = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(900, 770));
 
+        Panel.setBackground(new java.awt.Color(51, 51, 51));
         Panel.setPreferredSize(new java.awt.Dimension(900, 770));
         Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        list.setBorder(null);
+
+        jList1.setBackground(new java.awt.Color(51, 51, 51));
+        jList1.setFont(new java.awt.Font("MV Boli", 1, 12)); // NOI18N
         jList1.setModel(modelo);
         list.setViewportView(jList1);
 
@@ -203,10 +207,6 @@ public class Bebidas extends javax.swing.JInternalFrame {
         });
         Panel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 210, 240));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Imagenes/Fondo.png"))); // NOI18N
-        Fondo.setPreferredSize(new java.awt.Dimension(900, 770));
-        Panel.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 710));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -271,7 +271,6 @@ public class Bebidas extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Fondo;
     private javax.swing.JPanel Panel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

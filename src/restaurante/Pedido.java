@@ -8,7 +8,7 @@ public class Pedido {
     ArrayList<Comida> segundoPlato;
     ArrayList<Comida> postre;
     ArrayList<Comida> bebida;
-    int precioPedido;
+    float precioPedido;
 
     public Pedido() {
         
@@ -83,12 +83,14 @@ public class Pedido {
         this.bebida = bebida;
     }
 
-    public int getPrecioPedido() {
+    public float getPrecioPedido() {
         return precioPedido;
     }
 
-    public void setPrecioPedido(int precioPedido) {
+    public void setPrecioPedido(float precioPedido) {
         this.precioPedido = precioPedido;
     }
+
+
 
 }

@@ -113,11 +113,11 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
         listaBebida = new javax.swing.JScrollPane();
         modeloBebida=new DefaultListModel();
         listaPP4 = new javax.swing.JList<>();
-        jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Imagenes/Fondo.png"))); // NOI18N
 
@@ -206,9 +206,6 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
 
         getContentPane().add(listaBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 270, 270, 190));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/VisualizarPedidos/InformacionDelPedido.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 810, 90));
-
         jLabel7.setFont(new java.awt.Font("MV Boli", 1, 30)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Bebida:");
@@ -243,6 +240,9 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 140, 60));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/VisualizarPedidos/InformacionDelPedido.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 830, 90));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -259,9 +259,9 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
     private javax.swing.JLabel Fondo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

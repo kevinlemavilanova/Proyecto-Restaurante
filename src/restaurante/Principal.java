@@ -2,12 +2,15 @@ package restaurante;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
 import restaurante.Pedidos.ListaDeMesas;
 import restaurante.Pedidos.PrimerPlato;
+import restaurante.Varios.VistaMesas;
 
 public class Principal extends javax.swing.JInternalFrame {
 
@@ -30,7 +33,7 @@ public class Principal extends javax.swing.JInternalFrame {
 
     public void cargarPedidos() {
 
-        File ar = new File("C:\\Users\\christian\\Documents\\NetBeansProjects\\Restaurante\\src\\aplicacion\\Pedidos\\ListaPedidos.txt");
+        File ar = new File("ListaPedidos.txt");
         Scanner sc;
         try {
             sc = new Scanner(ar);
@@ -127,11 +130,85 @@ public class Principal extends javax.swing.JInternalFrame {
             AyudaBebida.add(comidaBebida[i]);
         }
         PedidoCargado.setBebida(AyudaBebida);
-    
+        PedidoCargado.setPrecioPedido(Float.parseFloat(atributosPedidos[5]));
         
-        System.out.print(PedidoCargado.toString());
+        TotalPedidos.add(PedidoCargado);
    
     }
+    
+    
+    public void escribirPedidos() {
+
+        File ar = new File("ListaPedidos.txt");
+        Scanner sc;
+
+        try {
+            FileWriter escritor = new FileWriter(ar);
+            sc = new Scanner(ar);
+            escritor.write("");
+
+            while (sc.hasNextLine()) {
+                escribirPed();
+            }
+            escritor.close();
+        } catch (IOException ex) {
+            Logger.getLogger("No se ha podido encontrar el archivo");
+        }
+
+    }
+
+    public void escribirPed() {
+        
+        
+        for (Pedido i : TotalPedidos){
+            String PedidoEscritor = "";
+            int cont = 0;
+            
+            PedidoEscritor += i.getN_mesa() + "--";
+            
+            for(Comida j : i.primerPlato){
+                if (cont == 0)
+                    PedidoEscritor += j.getNombre() + "." + j.getCantidad();
+                else
+                    PedidoEscritor += "\\*" + j.getNombre() + "." + j.getCantidad();
+            }
+            cont = 0;
+            PedidoEscritor += "--";
+            
+            for(Comida j : i.segundoPlato){
+                if (cont == 0)
+                    PedidoEscritor += j.getNombre() + "." + j.getCantidad();
+                else
+                    PedidoEscritor += "\\*" + j.getNombre() + "." + j.getCantidad();
+            }
+            cont = 0;
+            PedidoEscritor += "--";
+            
+            for(Comida j : i.postre){
+                if (cont == 0)
+                    PedidoEscritor += j.getNombre() + "." + j.getCantidad();
+                else
+                    PedidoEscritor += "\\*" + j.getNombre() + "." + j.getCantidad();
+            }
+            
+            cont = 0;
+            PedidoEscritor += "--";
+            
+            for(Comida j : i.bebida){
+                if (cont == 0)
+                    PedidoEscritor += j.getNombre() + "." + j.getCantidad();
+                else
+                    PedidoEscritor += "\\*" + j.getNombre() + "." + j.getCantidad();
+            }
+            
+            cont = 0;
+            PedidoEscritor += "--" + i.precioPedido;
+            
+        }
+    }
+        
+        
+        
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -142,16 +219,17 @@ public class Principal extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         PanelPrimero = new javax.swing.JPanel();
         PanelSegundo = new javax.swing.JPanel();
         PanelTercero = new javax.swing.JPanel();
         PanelCuarto = new javax.swing.JPanel();
         PanelQuinto = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(51, 51, 51));
         setPreferredSize(new java.awt.Dimension(900, 770));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Panel.setBackground(new java.awt.Color(51, 51, 51));
         Panel.setOpaque(false);
 
         jLabel1.setFont(new java.awt.Font("Script MT Bold", 3, 60)); // NOI18N
@@ -198,48 +276,52 @@ public class Principal extends javax.swing.JInternalFrame {
         jButton8.setIconTextGap(-3);
         jButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Imagenes/Fondo.png"))); // NOI18N
+        Panel.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel.setLayer(jButton8, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
         Panel.setLayout(PanelLayout);
         PanelLayout.setHorizontalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(570, 570, 570)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(340, 340, 340)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(570, 570, 570)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(340, 340, 340)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(150, 150, 150))
         );
         PanelLayout.setVerticalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jButton2))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(jButton8))
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(jButton7))
-            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(jButton2))
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(jButton8))
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(jButton7)))
+                .addGap(389, 389, 389))
         );
-        Panel.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        PanelPrimero.setBackground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout PanelPrimeroLayout = new javax.swing.GroupLayout(PanelPrimero);
         PanelPrimero.setLayout(PanelPrimeroLayout);
@@ -254,6 +336,8 @@ public class Principal extends javax.swing.JInternalFrame {
 
         getContentPane().add(PanelPrimero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
 
+        PanelSegundo.setBackground(new java.awt.Color(51, 51, 51));
+
         javax.swing.GroupLayout PanelSegundoLayout = new javax.swing.GroupLayout(PanelSegundo);
         PanelSegundo.setLayout(PanelSegundoLayout);
         PanelSegundoLayout.setHorizontalGroup(
@@ -266,6 +350,8 @@ public class Principal extends javax.swing.JInternalFrame {
         );
 
         getContentPane().add(PanelSegundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
+
+        PanelTercero.setBackground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout PanelTerceroLayout = new javax.swing.GroupLayout(PanelTercero);
         PanelTercero.setLayout(PanelTerceroLayout);
@@ -280,6 +366,8 @@ public class Principal extends javax.swing.JInternalFrame {
 
         getContentPane().add(PanelTercero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
 
+        PanelCuarto.setBackground(new java.awt.Color(51, 51, 51));
+
         javax.swing.GroupLayout PanelCuartoLayout = new javax.swing.GroupLayout(PanelCuarto);
         PanelCuarto.setLayout(PanelCuartoLayout);
         PanelCuartoLayout.setHorizontalGroup(
@@ -292,6 +380,8 @@ public class Principal extends javax.swing.JInternalFrame {
         );
 
         getContentPane().add(PanelCuarto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
+
+        PanelQuinto.setBackground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout PanelQuintoLayout = new javax.swing.GroupLayout(PanelQuinto);
         PanelQuinto.setLayout(PanelQuintoLayout);
@@ -320,7 +410,7 @@ public class Principal extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        PrimerPlato p1 = new PrimerPlato();
+        VistaMesas p1 = new VistaMesas();
         Panel.setVisible(false);
         PanelPrimero.add(p1);
         p1.setBorder(null);
@@ -339,6 +429,5 @@ public class Principal extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

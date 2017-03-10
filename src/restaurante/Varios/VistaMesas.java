@@ -34,7 +34,7 @@ public class VistaMesas extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         Panel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         btnM5 = new javax.swing.JButton();
         btnM3 = new javax.swing.JButton();
         btnM6 = new javax.swing.JButton();
@@ -57,8 +57,8 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         Panel.setPreferredSize(new java.awt.Dimension(900, 770));
         Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/VisualizarPedidos/VisualizarMesa.png"))); // NOI18N
-        Panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 380, 230));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/VisualizarPedidos/VisualizarMesa.png"))); // NOI18N
+        Panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 400, 230));
 
         btnM5.setBackground(new java.awt.Color(0, 0, 0));
         btnM5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/Mesa (5).png"))); // NOI18N
@@ -367,6 +367,6 @@ public class VistaMesas extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnM8;
     private javax.swing.JButton btnM9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
