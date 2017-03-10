@@ -166,7 +166,7 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
                 btnM2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, 100, 110));
+        jPanel1.add(btnM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 100, 100));
 
         btnM3.setBackground(new java.awt.Color(0, 0, 0));
         btnM3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Lista/Mesa (3).png"))); // NOI18N
@@ -227,100 +227,49 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
 
     private void btnM8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM8ActionPerformed
         nuevoPedido.setN_mesa(8);
-        a.cargarLista(lista, p1.getModelo());
-        p1.lista = lista;
-        this.hide();
-        intro.principal.add(p1);
-        p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
-        p1.show();
+        a.abrirMesas(lista);
     }//GEN-LAST:event_btnM8ActionPerformed
 
     private void btnM9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM9ActionPerformed
         nuevoPedido.setN_mesa(9);
-        p1.lista = lista;
-        a.cargarLista(lista, p1.getModelo());
-        this.hide();
-        intro.principal.add(p1);
-        p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
-        p1.show();
+        a.abrirMesas(lista);
+
     }//GEN-LAST:event_btnM9ActionPerformed
 
     private void btnM6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM6ActionPerformed
         nuevoPedido.setN_mesa(6);
-        p1.lista = lista;
-        a.cargarLista(lista, p1.getModelo());
-        this.hide();
-        intro.principal.add(p1);
-        p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
-        p1.show();
+        a.abrirMesas(lista);
     }//GEN-LAST:event_btnM6ActionPerformed
-
-    private void btnM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM7ActionPerformed
-        nuevoPedido.setN_mesa(7);
-        p1.lista = lista;
-        a.cargarLista(lista, p1.getModelo());
-        this.hide();
-        intro.principal.add(p1);
-        p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
-        p1.show();    }//GEN-LAST:event_btnM7ActionPerformed
 
     private void btnM4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM4ActionPerformed
         nuevoPedido.setN_mesa(4);
-        p1.lista = lista;
-        a.cargarLista(lista, p1.getModelo());
-        this.hide();
-        intro.principal.add(p1);
-        p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
-        p1.show();
+        a.abrirMesas(lista);
     }//GEN-LAST:event_btnM4ActionPerformed
 
     private void btnM5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM5ActionPerformed
         nuevoPedido.setN_mesa(5);
-        p1.lista = lista;
-        a.cargarLista(lista, p1.getModelo());
-        this.hide();
-        intro.principal.add(p1);
-        p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
-        p1.show();
+        a.abrirMesas(lista);
     }//GEN-LAST:event_btnM5ActionPerformed
 
     private void btnM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM3ActionPerformed
         nuevoPedido.setN_mesa(3);
-        p1.lista = lista;
-        a.cargarLista(lista, p1.getModelo());
-        this.hide();
-        intro.principal.add(p1);
-        p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
-        p1.show();
+        a.abrirMesas(lista);
     }//GEN-LAST:event_btnM3ActionPerformed
 
     private void btnM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM1ActionPerformed
         nuevoPedido.setN_mesa(1);
-        p1.lista = lista;
-        a.cargarLista(lista, p1.getModelo());
-        this.hide();
-        intro.principal.add(p1);
-        p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
-        p1.show();
+        a.abrirMesas(lista);
     }//GEN-LAST:event_btnM1ActionPerformed
+
+    private void btnM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM7ActionPerformed
+        nuevoPedido.setN_mesa(7);
+        a.abrirMesas(lista);
+    }//GEN-LAST:event_btnM7ActionPerformed
 
     private void btnM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM2ActionPerformed
         nuevoPedido.setN_mesa(2);
-        p1.lista = lista;
-        a.cargarLista(lista, p1.getModelo());
-        this.hide();
-        intro.principal.add(p1);
-        p1.setBorder(null);
-        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
-        p1.show();    }//GEN-LAST:event_btnM2ActionPerformed
+        a.abrirMesas(lista);
+    }//GEN-LAST:event_btnM2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

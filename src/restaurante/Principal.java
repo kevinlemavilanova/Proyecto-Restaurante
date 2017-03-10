@@ -12,18 +12,19 @@ import restaurante.Pedidos.PrimerPlato;
 public class Principal extends javax.swing.JInternalFrame {
 
     public static ArrayList<Pedido> TotalPedidos = new ArrayList<Pedido>();
-
+    public static Boolean atras = false;
+    
     public Principal() {
         initComponents();
         cargarPedidos();
     }
 
     public JPanel getPanel2() {
-        return Panel2;
+        return PanelPrimero;
     }
 
     public void setPanel2(JPanel Panel2) {
-        this.Panel2 = Panel2;
+        this.PanelPrimero = Panel2;
     }
     
 
@@ -126,7 +127,7 @@ public class Principal extends javax.swing.JInternalFrame {
             AyudaBebida.add(comidaBebida[i]);
         }
         PedidoCargado.setBebida(AyudaBebida);
-        
+    
         
         System.out.print(PedidoCargado.toString());
    
@@ -142,7 +143,11 @@ public class Principal extends javax.swing.JInternalFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        Panel2 = new javax.swing.JPanel();
+        PanelPrimero = new javax.swing.JPanel();
+        PanelSegundo = new javax.swing.JPanel();
+        PanelTercero = new javax.swing.JPanel();
+        PanelCuarto = new javax.swing.JPanel();
+        PanelQuinto = new javax.swing.JPanel();
 
         setPreferredSize(new java.awt.Dimension(900, 770));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -195,12 +200,6 @@ public class Principal extends javax.swing.JInternalFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Imagenes/Fondo.png"))); // NOI18N
 
-        Panel.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
         Panel.setLayout(PanelLayout);
         PanelLayout.setHorizontalGroup(
@@ -234,21 +233,78 @@ public class Principal extends javax.swing.JInternalFrame {
                 .addComponent(jButton7))
             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
+        Panel.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel.setLayer(jButton8, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        javax.swing.GroupLayout Panel2Layout = new javax.swing.GroupLayout(Panel2);
-        Panel2.setLayout(Panel2Layout);
-        Panel2Layout.setHorizontalGroup(
-            Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PanelPrimeroLayout = new javax.swing.GroupLayout(PanelPrimero);
+        PanelPrimero.setLayout(PanelPrimeroLayout);
+        PanelPrimeroLayout.setHorizontalGroup(
+            PanelPrimeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 900, Short.MAX_VALUE)
         );
-        Panel2Layout.setVerticalGroup(
-            Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PanelPrimeroLayout.setVerticalGroup(
+            PanelPrimeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 780, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
+        getContentPane().add(PanelPrimero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
+
+        javax.swing.GroupLayout PanelSegundoLayout = new javax.swing.GroupLayout(PanelSegundo);
+        PanelSegundo.setLayout(PanelSegundoLayout);
+        PanelSegundoLayout.setHorizontalGroup(
+            PanelSegundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 900, Short.MAX_VALUE)
+        );
+        PanelSegundoLayout.setVerticalGroup(
+            PanelSegundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(PanelSegundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
+
+        javax.swing.GroupLayout PanelTerceroLayout = new javax.swing.GroupLayout(PanelTercero);
+        PanelTercero.setLayout(PanelTerceroLayout);
+        PanelTerceroLayout.setHorizontalGroup(
+            PanelTerceroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 900, Short.MAX_VALUE)
+        );
+        PanelTerceroLayout.setVerticalGroup(
+            PanelTerceroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(PanelTercero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
+
+        javax.swing.GroupLayout PanelCuartoLayout = new javax.swing.GroupLayout(PanelCuarto);
+        PanelCuarto.setLayout(PanelCuartoLayout);
+        PanelCuartoLayout.setHorizontalGroup(
+            PanelCuartoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 900, Short.MAX_VALUE)
+        );
+        PanelCuartoLayout.setVerticalGroup(
+            PanelCuartoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(PanelCuarto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
+
+        javax.swing.GroupLayout PanelQuintoLayout = new javax.swing.GroupLayout(PanelQuinto);
+        PanelQuinto.setLayout(PanelQuintoLayout);
+        PanelQuintoLayout.setHorizontalGroup(
+            PanelQuintoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 900, Short.MAX_VALUE)
+        );
+        PanelQuintoLayout.setVerticalGroup(
+            PanelQuintoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(PanelQuinto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -257,7 +313,7 @@ public class Principal extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         ListaDeMesas p1 = new ListaDeMesas();
         Panel.setVisible(false);
-        Panel2.add(p1);
+        PanelPrimero.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -266,7 +322,7 @@ public class Principal extends javax.swing.JInternalFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         PrimerPlato p1 = new PrimerPlato();
         Panel.setVisible(false);
-        Panel2.add(p1);
+        PanelPrimero.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();    }//GEN-LAST:event_jButton7ActionPerformed
@@ -274,7 +330,11 @@ public class Principal extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane Panel;
-    public javax.swing.JPanel Panel2;
+    public javax.swing.JPanel PanelCuarto;
+    public javax.swing.JPanel PanelPrimero;
+    public javax.swing.JPanel PanelQuinto;
+    public javax.swing.JPanel PanelSegundo;
+    public javax.swing.JPanel PanelTercero;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;

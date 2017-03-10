@@ -20,7 +20,8 @@ public class Intro extends javax.swing.JFrame {
     public Intro() {
         initComponents();
     }
-    public Principal principal = new Principal(); 
+    
+    public static Principal principal = new Principal(); 
 
     public Principal getPrincipal() {
         return principal;

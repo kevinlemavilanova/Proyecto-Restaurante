@@ -2,11 +2,9 @@ package restaurante;
 
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import restaurante.Pedidos.PrimerPlato;
+import restaurante.*;
 
-/**
- *
- * @author nina
- */
 public class Funciones {
 
     public void seleccionarProducto(ArrayList<Comida> lista, Comida comida, DefaultListModel modelo) {
@@ -40,5 +38,19 @@ public class Funciones {
         for (Comida c : lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }    
+    }
+    
+    public void abrirMesas(ArrayList<Comida> lista){
+        PrimerPlato p1 = new PrimerPlato();
+        p1.lista = lista;
+        this.cargarLista(lista, p1.getModelo());
+        if (!Principal.atras) {
+            Intro.principal.PanelSegundo.add(p1);
+        }
+        Principal.atras = false;
+        Intro.principal.PanelPrimero.setVisible(false);
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
     }
 }

@@ -10,6 +10,7 @@ import restaurante.Comida;
 import javax.swing.DefaultListModel;
 import restaurante.Funciones;
 import restaurante.Intro;
+import restaurante.Principal;
 
 /**
  *
@@ -31,10 +32,9 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     Comida comida4 = new Comida("Callos", 3.10f);
     Comida comida5 = new Comida("Tortilla de patata", 2.35f);
     Comida comida6 = new Comida("Espinacas", 1.20f);
-    ArrayList<Comida> lista = new ArrayList<Comida>();
+    public ArrayList<Comida> lista = new ArrayList<Comida>();
     Funciones a = new Funciones();
-    Intro intro = new Intro();
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -469,9 +469,8 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
         SegundoPlato p1 = new SegundoPlato();
         p1.lista = lista;
         a.cargarLista(lista, p1.getModelo());
-        intro.principal.Panel2.removeAll();
-        intro.principal.Panel2.add(p1);
-        intro.principal.repaint();
+        Intro.principal.PanelSegundo.setVisible(false);
+        Intro.principal.PanelTercero.add(p1);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -480,9 +479,9 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         ListaDeMesas p1 = new ListaDeMesas();
         p1.lista = lista;
-        intro.principal.Panel2.removeAll();
-        intro.principal.Panel2.add(p1);
-        intro.principal.repaint();
+        Principal.atras = true;
+        Intro.principal.PanelSegundo.setVisible(false);
+        Intro.principal.PanelPrimero.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
