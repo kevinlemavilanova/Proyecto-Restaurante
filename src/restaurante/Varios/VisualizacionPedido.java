@@ -251,7 +251,13 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+        for (Pedido i : TotalPedidos){
+            int ayuda = Integer.parseInt(lbNumM.getText());
+            if (i.getN_mesa() == ayuda){
+                TotalPedidos.remove(i);
+            }
+        }
+       Principal.escribirPedidos();
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
