@@ -424,7 +424,7 @@ public class Principal extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane Panel;
+    public javax.swing.JDesktopPane Panel;
     public javax.swing.JPanel PanelCuarto;
     public javax.swing.JPanel PanelPrimero;
     public javax.swing.JPanel PanelQuinto;

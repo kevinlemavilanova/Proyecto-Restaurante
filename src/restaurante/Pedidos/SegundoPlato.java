@@ -24,12 +24,13 @@ public class SegundoPlato extends javax.swing.JInternalFrame {
     public SegundoPlato() {
         initComponents();
     }
-    Comida comida1 = new Comida("Alitas de pollo", 4.50f);
-    Comida comida2 = new Comida("Chuletillas de cerdo", 6.25f);
-    Comida comida3 = new Comida("Salmon", 5.30f);
-    Comida comida4 = new Comida("Gnocchis de patata", 4.75f);    
-    Comida comida5 = new Comida("Trucha a la navarra", 6.00f);
-    Comida comida6 = new Comida("Fritatta", 4.35f);
+    String cat = "segundo";
+    Comida comida1 = new Comida("Alitas de pollo", 4.50f, cat);
+    Comida comida2 = new Comida("Chuletillas de cerdo", 6.25f, cat);
+    Comida comida3 = new Comida("Salmon", 5.30f, cat);
+    Comida comida4 = new Comida("Gnocchis de patata", 4.75f, cat);    
+    Comida comida5 = new Comida("Trucha a la navarra", 6.00f, cat);
+    Comida comida6 = new Comida("Fritatta", 4.35f, cat);
     Funciones a = new Funciones();
     
     public DefaultListModel getModelo() {

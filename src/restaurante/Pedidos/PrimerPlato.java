@@ -25,13 +25,13 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     public DefaultListModel getModelo() {
         return modelo;
     }
-    
-    Comida comida1 = new Comida("Pasta con tomate", 5.5f);
-    Comida comida2 = new Comida("Sopa de zanahoria", 3.5f);
-    Comida comida3 = new Comida("Empanada de pollo", 2.25f);
-    Comida comida4 = new Comida("Callos", 3.10f);
-    Comida comida5 = new Comida("Tortilla de patata", 2.35f);
-    Comida comida6 = new Comida("Espinacas", 1.20f);
+    String cat = "primero";
+    Comida comida1 = new Comida("Pasta con tomate", 5.5f, cat);
+    Comida comida2 = new Comida("Sopa de zanahoria", 3.5f, cat);
+    Comida comida3 = new Comida("Empanada de pollo", 2.25f, cat);
+    Comida comida4 = new Comida("Callos", 3.10f, cat);
+    Comida comida5 = new Comida("Tortilla de patata", 2.35f, cat);
+    Comida comida6 = new Comida("Espinacas", 1.20f, cat);
     Funciones a = new Funciones();
     
     @SuppressWarnings("unchecked")

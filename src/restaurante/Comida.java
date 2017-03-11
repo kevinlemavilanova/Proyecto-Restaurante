@@ -13,10 +13,21 @@ public class Comida {
     private String nombre;
     private Float precio;
     private int cantidad = 0;
+    private String cat;
+
+    public Comida(String nombre, Float precio, String cat) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cat = cat;
+    }
     
     public Comida(String nombre, Float precio) {
         this.nombre = nombre;
         this.precio = precio;
+    }
+
+    public String getCat() {
+        return cat;
     }
 
     public void setCantidad(int cantidad) {

@@ -12,12 +12,13 @@ public class Bebidas extends javax.swing.JInternalFrame {
     public Bebidas() {
         initComponents();
     }
-    Comida comida1 = new Comida("Agua", 1f);
-    Comida comida2 = new Comida("Coca Cola", 2.5f);
-    Comida comida3 = new Comida("Fanta", 2f);
-    Comida comida4 = new Comida("Nestea", 2f);
-    Comida comida5 = new Comida("7up", 1.5f);
-    Comida comida6 = new Comida("Vino", 3.5f);
+    String cat = "bebida";
+    Comida comida1 = new Comida("Agua", 1f, cat);
+    Comida comida2 = new Comida("Coca Cola", 2.5f, cat);
+    Comida comida3 = new Comida("Fanta", 2f, cat);
+    Comida comida4 = new Comida("Nestea", 2f, cat);
+    Comida comida5 = new Comida("7up", 1.5f, cat);
+    Comida comida6 = new Comida("Vino", 3.5f, cat);
     Funciones a = new Funciones();
     
     public DefaultListModel getModelo() {

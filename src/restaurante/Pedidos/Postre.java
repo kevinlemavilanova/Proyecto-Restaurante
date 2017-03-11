@@ -12,12 +12,13 @@ public class Postre extends javax.swing.JInternalFrame {
     public Postre() {
         initComponents();
     }
-    Comida comida1 = new Comida("Filloas", 4.50f);
-    Comida comida2 = new Comida("Flan de queso", 6.25f);
-    Comida comida3 = new Comida("orejas", 5.30f);
-    Comida comida4 = new Comida("Tarta de chocolate", 4.75f);    
-    Comida comida5 = new Comida("Tarta de queso", 6.00f);
-    Comida comida6 = new Comida("Tarta de aguacate", 4.35f);
+    String cat = "postre";
+    Comida comida1 = new Comida("Filloas", 4.50f, cat);
+    Comida comida2 = new Comida("Flan de queso", 6.25f, cat);
+    Comida comida3 = new Comida("orejas", 5.30f, cat);
+    Comida comida4 = new Comida("Tarta de chocolate", 4.75f, cat);    
+    Comida comida5 = new Comida("Tarta de queso", 6.00f, cat);
+    Comida comida6 = new Comida("Tarta de aguacate", 4.35f, cat);
     Funciones a = new Funciones();
 
     public DefaultListModel getModelo() {
@@ -279,7 +280,25 @@ public class Postre extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-
+        Intro.principal.PanelQuinto.setVisible(false);
+        Intro.principal.Panel.setVisible(true);
+        for(Comida c: Principal.lista){
+            switch(c.getCat()){
+                case "primero":
+                    Principal.nuevoPedido.escogerPrimerPlato(c);
+                    break;
+                case "segundo":
+                    Principal.nuevoPedido.escogerSegundoPlato(c);
+                    break;
+                case "bebida":
+                    Principal.nuevoPedido.escogerebida(c);
+                    break;
+                case "postre":
+                    Principal.nuevoPedido.escogerPostre(c);
+                    break;
+            }
+        }
+        Principal.TotalPedidos.add(Principal.nuevoPedido);
     }//GEN-LAST:event_jButton9ActionPerformed
 
 

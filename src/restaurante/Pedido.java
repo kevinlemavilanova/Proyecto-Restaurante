@@ -4,10 +4,10 @@ import restaurante.Comida;
 
 public class Pedido {
     int n_mesa;
-    ArrayList<Comida> primerPlato;
-    ArrayList<Comida> segundoPlato;
-    ArrayList<Comida> postre;
-    ArrayList<Comida> bebida;
+    ArrayList<Comida> primerPlato = new ArrayList<Comida>();
+    ArrayList<Comida> segundoPlato = new ArrayList<Comida>();
+    ArrayList<Comida> postre = new ArrayList<Comida>();
+    ArrayList<Comida> bebida = new ArrayList<Comida>();
     float precioPedido;
 
     public Pedido() {
