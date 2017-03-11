@@ -5,20 +5,50 @@ import restaurante.Comida;
 import restaurante.Funciones;
 import restaurante.Intro;
 import restaurante.Pedido;
+import static restaurante.Principal.TotalPedidos;
+import static restaurante.Principal.nuevoPedido;
 
 public class ListaDeMesas extends javax.swing.JInternalFrame {
 
     public ListaDeMesas() {
         initComponents();
+        DarMesa();
     }
-    public Pedido nuevoPedido = new Pedido();
     PrimerPlato p1 = new PrimerPlato();
     Funciones a = new Funciones();
     Intro intro = new Intro();
     
-    public void DarMesa(Pedido tpedidos[]) {
-        for (Pedido i : tpedidos) {
-
+    public void DarMesa() {
+        for (Pedido i : TotalPedidos) {
+            switch (i.getN_mesa()) {
+                case 1:
+                    btnM1.setEnabled(false);
+                    break;
+                case 2:
+                    btnM2.setEnabled(false);
+                    break;
+                case 3:
+                    btnM3.setEnabled(false);
+                    break;
+                case 4:
+                    btnM4.setEnabled(false);
+                    break;
+                case 5:
+                    btnM5.setEnabled(false);
+                    break;
+                case 6:
+                    btnM6.setEnabled(false);
+                    break;
+                case 7:
+                    btnM7.setEnabled(false);
+                    break;
+                case 8:
+                    btnM8.setEnabled(false);
+                    break;
+                case 9:
+                    btnM9.setEnabled(false);
+                    break;
+            }
         }
     }
 

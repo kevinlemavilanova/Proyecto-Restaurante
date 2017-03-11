@@ -19,6 +19,8 @@ public class Principal extends javax.swing.JInternalFrame {
 
     public static Boolean atras = false;
     
+    public static Pedido nuevoPedido = new Pedido();
+    
     public Principal() {
         initComponents();
         cargarPedidos();
@@ -139,7 +141,7 @@ public class Principal extends javax.swing.JInternalFrame {
     }
     
     
-    public void escribirPedidos() {
+     public static void escribirPedidos() {
 
         File ar = new File("ListaPedidos.txt");
         Scanner sc;
@@ -149,8 +151,8 @@ public class Principal extends javax.swing.JInternalFrame {
             sc = new Scanner(ar);
             escritor.write("");
 
-            while (sc.hasNextLine()) {
-                escribirPed();
+            for(Pedido i : TotalPedidos){
+                escribirPed(ar);
             }
             escritor.close();
         } catch (IOException ex) {
@@ -159,8 +161,8 @@ public class Principal extends javax.swing.JInternalFrame {
 
     }
 
-    public void escribirPed() {
-        
+    public static void escribirPed(File ar) throws IOException {
+        FileWriter escritor = new FileWriter(ar);
         
         for (Pedido i : TotalPedidos){
             String PedidoEscritor = "";
@@ -205,9 +207,10 @@ public class Principal extends javax.swing.JInternalFrame {
             
             cont = 0;
             PedidoEscritor += "--" + i.precioPedido;
-            
+            escritor.write(PedidoEscritor + "\n");
         }
     }
+        
         
         
         
