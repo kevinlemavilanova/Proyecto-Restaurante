@@ -299,6 +299,7 @@ public class Postre extends javax.swing.JInternalFrame {
             }
         }
         Principal.TotalPedidos.add(Principal.nuevoPedido);
+        Principal.escribirPedidos();
     }//GEN-LAST:event_jButton9ActionPerformed
 
 

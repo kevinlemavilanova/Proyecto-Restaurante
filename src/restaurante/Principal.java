@@ -208,6 +208,7 @@ public class Principal extends javax.swing.JInternalFrame {
             cont = 0;
             PedidoEscritor += "--" + i.precioPedido;
             escritor.write(PedidoEscritor + "\n");
+            escritor.flush();
         }
     }
         
