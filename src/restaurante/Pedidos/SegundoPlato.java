@@ -32,12 +32,10 @@ public class SegundoPlato extends javax.swing.JInternalFrame {
     Comida comida6 = new Comida("Fritatta", 4.35f);
     public ArrayList<Comida> lista = new ArrayList<Comida>();
     Funciones a = new Funciones();
-    Intro intro = new Intro();
     
     public DefaultListModel getModelo() {
         return modelo;
     }
-    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

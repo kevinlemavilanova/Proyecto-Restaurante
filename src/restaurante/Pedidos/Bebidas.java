@@ -5,13 +5,10 @@ import javax.swing.DefaultListModel;
 import restaurante.Comida;
 import restaurante.Funciones;
 import restaurante.Intro;
-import restaurante.Pedidos.ListaDeMesas;
+import restaurante.Principal;
 
 public class Bebidas extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form Bebidas
-     */
     public Bebidas() {
         initComponents();
     }
@@ -23,21 +20,16 @@ public class Bebidas extends javax.swing.JInternalFrame {
     Comida comida6 = new Comida("Vino", 3.5f);
     public ArrayList<Comida> lista = new ArrayList<Comida>();
     Funciones a = new Funciones();
-    Intro intro = new Intro();
     
     public DefaultListModel getModelo() {
         return modelo;
     }
-    
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         Panel = new javax.swing.JPanel();
-        list = new javax.swing.JScrollPane();
-        modelo=new DefaultListModel();
-        jList1 = new javax.swing.JList<>();
         jButton9 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
@@ -47,6 +39,9 @@ public class Bebidas extends javax.swing.JInternalFrame {
         jButton3 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        list = new javax.swing.JScrollPane();
+        modelo=new DefaultListModel();
+        jList1 = new javax.swing.JList<>();
         jButton2 = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(900, 770));
@@ -54,15 +49,6 @@ public class Bebidas extends javax.swing.JInternalFrame {
         Panel.setBackground(new java.awt.Color(51, 51, 51));
         Panel.setPreferredSize(new java.awt.Dimension(900, 770));
         Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        list.setBorder(null);
-
-        jList1.setBackground(new java.awt.Color(51, 51, 51));
-        jList1.setFont(new java.awt.Font("MV Boli", 1, 12)); // NOI18N
-        jList1.setModel(modelo);
-        list.setViewportView(jList1);
-
-        Panel.add(list, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 170, 410));
 
         jButton9.setText("Siguiente");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -188,6 +174,16 @@ public class Bebidas extends javax.swing.JInternalFrame {
         });
         Panel.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 210, 240));
 
+        list.setBorder(null);
+
+        jList1.setBackground(new java.awt.Color(51, 51, 51));
+        jList1.setFont(new java.awt.Font("MV Boli", 1, 12)); // NOI18N
+        jList1.setForeground(new java.awt.Color(255, 255, 255));
+        jList1.setModel(modelo);
+        list.setViewportView(jList1);
+
+        Panel.add(list, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 170, 410));
+
         jButton2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacion/Mesas/Bebidas/CocaCola.png"))); // NOI18N
@@ -246,10 +242,14 @@ public class Bebidas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        Bebidas p1 = new Bebidas();
+        Postre p1 = new Postre();
         p1.lista = lista;
-        this.hide();
-        intro.principal.add(p1);
+        a.cargarLista(lista, p1.getModelo());
+        Intro.principal.PanelCuarto.setVisible(false);
+        if (Intro.principal.PanelQuinto.getComponentCount() == 0){
+            Intro.principal.PanelQuinto.add(p1);
+        }
+        Intro.principal.PanelQuinto.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
@@ -258,15 +258,30 @@ public class Bebidas extends javax.swing.JInternalFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         SegundoPlato p1 = new SegundoPlato();
         p1.lista = lista;
-        this.hide();
-        intro.principal.add(p1);
+        Principal.atras = true;
+        Intro.principal.PanelCuarto.setVisible(false);
+        Intro.principal.PanelTercero.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-
+        String value = jList1.getSelectedValue().substring(5, jList1.getSelectedValue().length());
+        for (Comida c : lista) {
+            String cnombre = c.getNombre();
+            if (value.equals(cnombre)) {
+                c.setCantidad(c.getCantidad() - 1);
+                if (c.getCantidad() == 0) {
+                    lista.remove(c);
+                }
+                break;
+            }
+        }
+        modelo.removeAllElements();
+        for (Comida c : lista) {
+            modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
+        }
     }//GEN-LAST:event_jButton7ActionPerformed
 
 
