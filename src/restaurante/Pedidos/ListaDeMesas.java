@@ -12,7 +12,6 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
         initComponents();
     }
     public Pedido nuevoPedido = new Pedido();
-    public ArrayList<Comida> lista = new ArrayList<Comida>();
     PrimerPlato p1 = new PrimerPlato();
     Funciones a = new Funciones();
     Intro intro = new Intro();
@@ -227,48 +226,47 @@ public class ListaDeMesas extends javax.swing.JInternalFrame {
 
     private void btnM8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM8ActionPerformed
         nuevoPedido.setN_mesa(8);
-        a.abrirMesas(lista);
+        a.abrirMesas();
     }//GEN-LAST:event_btnM8ActionPerformed
 
     private void btnM9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM9ActionPerformed
         nuevoPedido.setN_mesa(9);
-        a.abrirMesas(lista);
-
+        a.abrirMesas();
     }//GEN-LAST:event_btnM9ActionPerformed
 
     private void btnM6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM6ActionPerformed
         nuevoPedido.setN_mesa(6);
-        a.abrirMesas(lista);
+        a.abrirMesas();
     }//GEN-LAST:event_btnM6ActionPerformed
 
     private void btnM4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM4ActionPerformed
         nuevoPedido.setN_mesa(4);
-        a.abrirMesas(lista);
+        a.abrirMesas();
     }//GEN-LAST:event_btnM4ActionPerformed
 
     private void btnM5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM5ActionPerformed
         nuevoPedido.setN_mesa(5);
-        a.abrirMesas(lista);
+        a.abrirMesas();
     }//GEN-LAST:event_btnM5ActionPerformed
 
     private void btnM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM3ActionPerformed
         nuevoPedido.setN_mesa(3);
-        a.abrirMesas(lista);
+        a.abrirMesas();
     }//GEN-LAST:event_btnM3ActionPerformed
 
     private void btnM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM1ActionPerformed
         nuevoPedido.setN_mesa(1);
-        a.abrirMesas(lista);
+        a.abrirMesas();
     }//GEN-LAST:event_btnM1ActionPerformed
 
     private void btnM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM7ActionPerformed
         nuevoPedido.setN_mesa(7);
-        a.abrirMesas(lista);
+        a.abrirMesas();
     }//GEN-LAST:event_btnM7ActionPerformed
 
     private void btnM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM2ActionPerformed
         nuevoPedido.setN_mesa(2);
-        a.abrirMesas(lista);
+        a.abrirMesas();
     }//GEN-LAST:event_btnM2ActionPerformed
 
 

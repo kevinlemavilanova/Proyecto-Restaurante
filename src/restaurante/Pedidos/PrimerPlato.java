@@ -32,7 +32,6 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
     Comida comida4 = new Comida("Callos", 3.10f);
     Comida comida5 = new Comida("Tortilla de patata", 2.35f);
     Comida comida6 = new Comida("Espinacas", 1.20f);
-    public ArrayList<Comida> lista = new ArrayList<Comida>();
     Funciones a = new Funciones();
     
     @SuppressWarnings("unchecked")
@@ -230,18 +229,18 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         String value = jList1.getSelectedValue().substring(5, jList1.getSelectedValue().length());
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             String cnombre = c.getNombre();
             if (value.equals(cnombre)) {
                 c.setCantidad(c.getCantidad() - 1);
                 if (c.getCantidad() == 0) {
-                    lista.remove(c);
+                    Principal.lista.remove(c);
                 }
                 break;
             }
         }
         modelo.removeAllElements();
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }
 
@@ -249,159 +248,158 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         int aux = 0;
-        if (lista.size() > 0) {
-            for (Comida c : lista) {
+        if (Principal.lista.size() > 0) {
+            for (Comida c : Principal.lista) {
                 if (c.getNombre().equals(comida5.getNombre())) {
                     c.setCantidad(c.getCantidad() + 1);
                     break;
                 } else {
                     aux++;
                 }
-                if (aux == lista.size()) {
+                if (aux == Principal.lista.size()) {
                     comida5.setCantidad(comida5.getCantidad() + 1);
-                    lista.add(comida5);
+                    Principal.lista.add(comida5);
                     break;
                 }
             }
         } else {
             comida5.setCantidad(comida5.getCantidad() + 1);
-            lista.add(comida5);
+            Principal.lista.add(comida5);
         }
         modelo.removeAllElements();
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int aux = 0;
-        if (lista.size() > 0) {
-            for (Comida c : lista) {
+        if (Principal.lista.size() > 0) {
+            for (Comida c : Principal.lista) {
                 if (c.getNombre().equals(comida1.getNombre())) {
                     c.setCantidad(c.getCantidad() + 1);
                     break;
                 } else {
                     aux++;
                 }
-                if (aux == lista.size()) {
+                if (aux == Principal.lista.size()) {
                     comida1.setCantidad(comida1.getCantidad() + 1);
-                    lista.add(comida1);
+                    Principal.lista.add(comida1);
                     break;
                 }
             }
         } else {
             comida1.setCantidad(comida1.getCantidad() + 1);
-            lista.add(comida1);
+            Principal.lista.add(comida1);
         }
         modelo.removeAllElements();
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         int aux = 0;
-        if (lista.size() > 0) {
-            for (Comida c : lista) {
+        if (Principal.lista.size() > 0) {
+            for (Comida c : Principal.lista) {
                 if (c.getNombre().equals(comida4.getNombre())) {
                     c.setCantidad(c.getCantidad() + 1);
                     break;
                 } else {
                     aux++;
                 }
-                if (aux == lista.size()) {
+                if (aux == Principal.lista.size()) {
                     comida4.setCantidad(comida4.getCantidad() + 1);
-                    lista.add(comida4);
+                    Principal.lista.add(comida4);
                     break;
                 }
             }
         } else {
             comida4.setCantidad(comida4.getCantidad() + 1);
-            lista.add(comida4);
+            Principal.lista.add(comida4);
         }
         modelo.removeAllElements();
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int aux = 0;
-        if (lista.size() > 0) {
-            for (Comida c : lista) {
+        if (Principal.lista.size() > 0) {
+            for (Comida c : Principal.lista) {
                 if (c.getNombre().equals(comida2.getNombre())) {
                     c.setCantidad(c.getCantidad() + 1);
                     break;
                 } else {
                     aux++;
                 }
-                if (aux == lista.size()) {
+                if (aux == Principal.lista.size()) {
                     comida2.setCantidad(comida2.getCantidad() + 1);
-                    lista.add(comida2);
+                    Principal.lista.add(comida2);
                     break;
                 }
             }
         } else {
             comida2.setCantidad(comida2.getCantidad() + 1);
-            lista.add(comida2);
+            Principal.lista.add(comida2);
         }
         modelo.removeAllElements();
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         int aux = 0;
-        if (lista.size() > 0) {
-            for (Comida c : lista) {
+        if (Principal.lista.size() > 0) {
+            for (Comida c : Principal.lista) {
                 if (c.getNombre().equals(comida6.getNombre())) {
                     c.setCantidad(c.getCantidad() + 1);
                     break;
                 } else {
                     aux++;
                 }
-                if (aux == lista.size()) {
+                if (aux == Principal.lista.size()) {
                     comida6.setCantidad(comida6.getCantidad() + 1);
-                    lista.add(comida6);
+                    Principal.lista.add(comida6);
                     break;
                 }
             }
         } else {
             comida6.setCantidad(comida6.getCantidad() + 1);
-            lista.add(comida6);
+            Principal.lista.add(comida6);
         }
         modelo.removeAllElements();
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         int aux = 0;
-        if (lista.size() > 0) {
-            for (Comida c : lista) {
+        if (Principal.lista.size() > 0) {
+            for (Comida c : Principal.lista) {
                 if (c.getNombre().equals(comida3.getNombre())) {
                     c.setCantidad(c.getCantidad() + 1);
                     break;
                 } else {
                     aux++;
                 }
-                if (aux == lista.size()) {
+                if (aux == Principal.lista.size()) {
                     comida3.setCantidad(comida3.getCantidad() + 1);
-                    lista.add(comida3);
+                    Principal.lista.add(comida3);
                     break;
                 }
             }
         } else {
             comida3.setCantidad(comida3.getCantidad() + 1);
-            lista.add(comida3);
+            Principal.lista.add(comida3);
         }
         modelo.removeAllElements();
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         SegundoPlato p1 = new SegundoPlato();
-        p1.lista = lista;
-        a.cargarLista(lista, p1.getModelo());
+        a.cargarLista(p1.getModelo());
         Intro.principal.PanelSegundo.setVisible(false);
         if (Intro.principal.PanelTercero.getComponentCount() == 0){
             Intro.principal.PanelTercero.add(p1);
@@ -414,9 +412,10 @@ public class PrimerPlato extends javax.swing.JInternalFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         ListaDeMesas p1 = new ListaDeMesas();
-        p1.lista = lista;
         Principal.atras = true;
         Intro.principal.PanelSegundo.setVisible(false);
+        Intro.principal.PanelPrimero.remove(0);
+        Intro.principal.PanelPrimero.add(p1);
         Intro.principal.PanelPrimero.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);

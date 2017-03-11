@@ -7,43 +7,39 @@ import restaurante.*;
 
 public class Funciones {
 
-    public void seleccionarProducto(ArrayList<Comida> lista, Comida comida, DefaultListModel modelo) {
+    public void seleccionarProducto(Comida comida, DefaultListModel modelo) {
         int aux = 0;
-        if (lista.size() > 0) {
-            for (Comida c : lista) {
+        if (Principal.lista.size() > 0) {
+            for (Comida c : Principal.lista) {
                 if (c.getNombre().equals(comida.getNombre())) {
                     c.setCantidad(c.getCantidad() + 1);
                     break;
                 } else {
                     aux++;
                 }
-                if (aux == lista.size()) {
+                if (aux == Principal.lista.size()) {
                     comida.setCantidad(comida.getCantidad() + 1);
-                    lista.add(comida);
+                    Principal.lista.add(comida);
                     break;
                 }
             }
         } else {
             comida.setCantidad(comida.getCantidad() + 1);
-            lista.add(comida);
+            Principal.lista.add(comida);
         }
-        modelo.removeAllElements();
-        for (Comida c : lista) {
-            modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
-        }
+        this.cargarLista(modelo);
     }
 
-    public void cargarLista(ArrayList<Comida> lista, DefaultListModel modelo) {
+    public void cargarLista(DefaultListModel modelo) {
         modelo.removeAllElements();
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }    
     }
     
-    public void abrirMesas(ArrayList<Comida> lista){
+    public void abrirMesas(){
         PrimerPlato p1 = new PrimerPlato();
-        p1.lista = lista;
-        this.cargarLista(lista, p1.getModelo());
+        this.cargarLista(p1.getModelo());
         if (!Principal.atras) {
             Intro.principal.PanelSegundo.add(p1);
         }

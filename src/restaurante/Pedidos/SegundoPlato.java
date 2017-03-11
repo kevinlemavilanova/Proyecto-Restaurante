@@ -30,7 +30,6 @@ public class SegundoPlato extends javax.swing.JInternalFrame {
     Comida comida4 = new Comida("Gnocchis de patata", 4.75f);    
     Comida comida5 = new Comida("Trucha a la navarra", 6.00f);
     Comida comida6 = new Comida("Fritatta", 4.35f);
-    public ArrayList<Comida> lista = new ArrayList<Comida>();
     Funciones a = new Funciones();
     
     public DefaultListModel getModelo() {
@@ -234,51 +233,50 @@ public class SegundoPlato extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        a.seleccionarProducto(lista, comida4, modelo);
+        a.seleccionarProducto(comida4, modelo);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        a.seleccionarProducto(lista, comida5, modelo);
+        a.seleccionarProducto(comida5, modelo);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        a.seleccionarProducto(lista, comida6, modelo);
+        a.seleccionarProducto(comida6, modelo);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        a.seleccionarProducto(lista, comida3, modelo);
+        a.seleccionarProducto(comida3, modelo);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        a.seleccionarProducto(lista, comida2, modelo);
+        a.seleccionarProducto(comida2, modelo);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        a.seleccionarProducto(lista, comida1, modelo);
+        a.seleccionarProducto(comida1, modelo);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         String value = jList1.getSelectedValue().substring(5, jList1.getSelectedValue().length());
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             String cnombre = c.getNombre();
             if (value.equals(cnombre)) {
                 c.setCantidad(c.getCantidad() - 1);
                 if (c.getCantidad() == 0) {
-                    lista.remove(c);
+                    Principal.lista.remove(c);
                 }
                 break;
             }
         }
         modelo.removeAllElements();
-        for (Comida c : lista) {
+        for (Comida c : Principal.lista) {
             modelo.addElement(c.getCantidad() + "x   " + c.getNombre());
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         Bebidas p1 = new Bebidas();
-        p1.lista = lista;
-        a.cargarLista(lista, p1.getModelo());
+        a.cargarLista(p1.getModelo());
         Intro.principal.PanelTercero.setVisible(false);
         if (Intro.principal.PanelCuarto.getComponentCount() == 0){
             Intro.principal.PanelCuarto.add(p1);
@@ -291,9 +289,11 @@ public class SegundoPlato extends javax.swing.JInternalFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         PrimerPlato p1 = new PrimerPlato();
-        p1.lista = lista;
+        a.cargarLista(p1.getModelo());
         Principal.atras = true;
         Intro.principal.PanelTercero.setVisible(false);
+        Intro.principal.PanelSegundo.remove(0);
+        Intro.principal.PanelSegundo.add(p1);
         Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -314,7 +314,7 @@ public class SegundoPlato extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JList<String> jList1;
-    private DefaultListModel modelo;
+    private static DefaultListModel modelo;
     private javax.swing.JScrollPane list;
     // End of variables declaration//GEN-END:variables
 }

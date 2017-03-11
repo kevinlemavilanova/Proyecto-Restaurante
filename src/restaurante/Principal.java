@@ -15,6 +15,8 @@ import restaurante.Varios.VistaMesas;
 public class Principal extends javax.swing.JInternalFrame {
 
     public static ArrayList<Pedido> TotalPedidos = new ArrayList<Pedido>();
+    public static ArrayList<Comida> lista = new ArrayList<Comida>();
+
     public static Boolean atras = false;
     
     public Principal() {
