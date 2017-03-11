@@ -411,9 +411,8 @@ public class Principal extends javax.swing.JInternalFrame {
         Panel.setVisible(false);
         if (Intro.principal.PanelPrimero.getComponentCount() == 0){
             PanelPrimero.add(p1);
-        } else {
-            PanelPrimero.setVisible(true);
         }
+        PanelPrimero.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();

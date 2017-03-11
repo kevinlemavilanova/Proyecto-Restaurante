@@ -301,6 +301,12 @@ public class Postre extends javax.swing.JInternalFrame {
         }
         Principal.TotalPedidos.add(Principal.nuevoPedido);
         Principal.escribirPedidos();
+        Intro.principal.PanelPrimero.removeAll();
+        Intro.principal.PanelSegundo.removeAll();
+        Intro.principal.PanelTercero.removeAll();
+        Intro.principal.PanelCuarto.removeAll();
+        Intro.principal.PanelQuinto.removeAll();
+        Principal.lista.clear();
     }//GEN-LAST:event_jButton9ActionPerformed
 
 
