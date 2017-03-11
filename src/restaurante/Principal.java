@@ -409,7 +409,11 @@ public class Principal extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         ListaDeMesas p1 = new ListaDeMesas();
         Panel.setVisible(false);
-        PanelPrimero.add(p1);
+        if (Intro.principal.PanelPrimero.getComponentCount() == 0){
+            PanelPrimero.add(p1);
+        } else {
+            PanelPrimero.setVisible(true);
+        }
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();

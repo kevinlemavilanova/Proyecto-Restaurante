@@ -8,7 +8,7 @@ public class Pedido {
     ArrayList<Comida> segundoPlato = new ArrayList<Comida>();
     ArrayList<Comida> postre = new ArrayList<Comida>();
     ArrayList<Comida> bebida = new ArrayList<Comida>();
-    float precioPedido;
+    float precioPedido = 0;
 
     public Pedido() {
         
