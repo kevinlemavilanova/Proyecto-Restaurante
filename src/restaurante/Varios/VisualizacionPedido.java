@@ -10,6 +10,7 @@ import javax.swing.DefaultListModel;
 import restaurante.Principal;
 import restaurante.Pedido;
 import restaurante.Comida;
+import restaurante.Intro;
 import static restaurante.Principal.TotalPedidos;
 
 /**
@@ -18,73 +19,70 @@ import static restaurante.Principal.TotalPedidos;
  */
 public class VisualizacionPedido extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form VisualizacionPedido
-     */
+    VistaMesas p1 = new VistaMesas();
+
     public VisualizacionPedido() {
         initComponents();
-        
+
     }
-    
+
     public DefaultListModel getModeloPP() {
         return modeloPP;
     }
+
     public DefaultListModel getModeloSP() {
         return modeloSP;
     }
+
     public DefaultListModel getModeloBebida() {
         return modeloBebida;
     }
+
     public DefaultListModel getModeloPostre() {
         return modeloPostre;
     }
 
-    public void cargarInformacion(int mesa){
+    public void cargarInformacion(int mesa) {
         Pedido pedidoCargar = new Pedido();
-        for (Pedido i : TotalPedidos){
-            if (i.getN_mesa() == mesa){
-                pedidoCargar = i; 
-            }      
+        for (Pedido i : TotalPedidos) {
+            if (i.getN_mesa() == mesa) {
+                pedidoCargar = i;
+            }
         }
-        
+
         lbNumM.setText(Integer.toString(pedidoCargar.getN_mesa()));
         lbPrecio.setText(Float.toString(pedidoCargar.getPrecioPedido()) + "€");
-        
+
         ArrayList<Comida> AyudaPP = new ArrayList<Comida>();
-      
+
         AyudaPP = pedidoCargar.getPrimerPlato();
-        for(Comida i : AyudaPP){
+        for (Comida i : AyudaPP) {
             modeloPP.addElement("-" + i.getNombre() + "  " + i.getCantidad());
         }
-        
+
         ArrayList<Comida> AyudaSP = new ArrayList<Comida>();
-      
+
         AyudaSP = pedidoCargar.getSegundoPlato();
-        for(Comida i : AyudaSP){
+        for (Comida i : AyudaSP) {
             modeloSP.addElement("-" + i.getNombre() + "  " + i.getCantidad());
         }
-        
+
         ArrayList<Comida> AyudaPostre = new ArrayList<Comida>();
-      
+
         AyudaPostre = pedidoCargar.getPostre();
-        for(Comida i : AyudaPostre){
+        for (Comida i : AyudaPostre) {
             modeloPostre.addElement("-" + i.getNombre() + "  " + i.getCantidad());
         }
-        
+
         ArrayList<Comida> AyudaBebida = new ArrayList<Comida>();
-      
+
         AyudaBebida = pedidoCargar.getBebida();
-        for(Comida i : AyudaBebida){
+        for (Comida i : AyudaBebida) {
             modeloBebida.addElement("-" + i.getNombre() + "  " + i.getCantidad());
         }
-        
-        
-        
-        
-        
-        
-        
+
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -247,17 +245,27 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        Intro.principal.PanelSexto.setVisible(false);
+        Intro.principal.PanelPrimero.remove(0);
+        Intro.principal.PanelPrimero.add(p1);
+        Intro.principal.PanelPrimero.setVisible(true);
+        p1.setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
+        p1.show();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        for (Pedido i : TotalPedidos){
+        for (Pedido i : TotalPedidos) {
             int ayuda = Integer.parseInt(lbNumM.getText());
-            if (i.getN_mesa() == ayuda){
+            if (i.getN_mesa() == ayuda) {
                 TotalPedidos.remove(i);
             }
         }
-       Principal.escribirPedidos();
+        Intro.principal.PanelSexto.setVisible(false);
+        Intro.principal.Panel.setVisible(true);
+        Principal.escribirPedidos();
+        Intro.principal.PanelPrimero.removeAll();
+        Intro.principal.PanelSexto.removeAll();
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

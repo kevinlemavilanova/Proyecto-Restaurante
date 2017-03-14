@@ -230,6 +230,7 @@ public class Principal extends javax.swing.JInternalFrame {
         PanelTercero = new javax.swing.JPanel();
         PanelCuarto = new javax.swing.JPanel();
         PanelQuinto = new javax.swing.JPanel();
+        PanelSexto = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(51, 51, 51));
         setPreferredSize(new java.awt.Dimension(900, 770));
@@ -282,11 +283,6 @@ public class Principal extends javax.swing.JInternalFrame {
         jButton8.setIconTextGap(-3);
         jButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        Panel.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Panel.setLayer(jButton8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
         Panel.setLayout(PanelLayout);
         PanelLayout.setHorizontalGroup(
@@ -324,6 +320,10 @@ public class Principal extends javax.swing.JInternalFrame {
                         .addComponent(jButton7)))
                 .addGap(389, 389, 389))
         );
+        Panel.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel.setLayer(jButton8, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -402,6 +402,21 @@ public class Principal extends javax.swing.JInternalFrame {
 
         getContentPane().add(PanelQuinto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
 
+        PanelSexto.setBackground(new java.awt.Color(51, 51, 51));
+
+        javax.swing.GroupLayout PanelSextoLayout = new javax.swing.GroupLayout(PanelSexto);
+        PanelSexto.setLayout(PanelSextoLayout);
+        PanelSextoLayout.setHorizontalGroup(
+            PanelSextoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 900, Short.MAX_VALUE)
+        );
+        PanelSextoLayout.setVerticalGroup(
+            PanelSextoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(PanelSexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 900, 780));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -421,7 +436,10 @@ public class Principal extends javax.swing.JInternalFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         VistaMesas p1 = new VistaMesas();
         Panel.setVisible(false);
-        PanelPrimero.add(p1);
+        if (Intro.principal.PanelPrimero.getComponentCount() == 0){
+            PanelPrimero.add(p1);
+        }
+        PanelPrimero.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();    }//GEN-LAST:event_jButton7ActionPerformed
@@ -433,6 +451,7 @@ public class Principal extends javax.swing.JInternalFrame {
     public javax.swing.JPanel PanelPrimero;
     public javax.swing.JPanel PanelQuinto;
     public javax.swing.JPanel PanelSegundo;
+    public javax.swing.JPanel PanelSexto;
     public javax.swing.JPanel PanelTercero;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton7;
