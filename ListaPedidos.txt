@@ -1,3 +1,0 @@
-6--Sopa de zanahoria.1--Salmon.1--orejas.1--Fanta.1--33.3
-8--Empanada de pollo.1--Fritatta.1--Tarta de queso.1--Coca Cola.1--15.1
-2--Empanada de pollo.1----Flan de queso.1--7up.1--10.0

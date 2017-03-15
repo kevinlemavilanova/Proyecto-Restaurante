@@ -23,7 +23,6 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
 
     public VisualizacionPedido() {
         initComponents();
-
     }
 
     public DefaultListModel getModeloPP() {
@@ -51,7 +50,7 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
         }
 
         lbNumM.setText(Integer.toString(pedidoCargar.getN_mesa()));
-        lbPrecio.setText(Float.toString(pedidoCargar.getPrecioPedido()) + "€");
+        lbPrecio.setText(pedidoCargar.getPrecioPedido() + "€");
 
         ArrayList<Comida> AyudaPP = new ArrayList<Comida>();
 
@@ -124,7 +123,7 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(900, 770));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbPrecio.setFont(new java.awt.Font("MV Boli", 1, 36)); // NOI18N
+        lbPrecio.setFont(new java.awt.Font("MV Boli", 1, 30)); // NOI18N
         lbPrecio.setForeground(new java.awt.Color(255, 255, 255));
         lbPrecio.setText("80€");
         lbPrecio.setEnabled(false);

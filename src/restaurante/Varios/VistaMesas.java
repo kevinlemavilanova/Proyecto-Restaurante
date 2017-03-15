@@ -280,6 +280,7 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
             Intro.principal.PanelSegundo.add(p1);
         }
+        p1.cargarInformacion(9);
         Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -292,6 +293,7 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
             Intro.principal.PanelSegundo.add(p1);
         }
+        p1.cargarInformacion(7);
         Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -304,6 +306,7 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
             Intro.principal.PanelSegundo.add(p1);
         }
+        p1.cargarInformacion(2);
         Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -316,6 +319,7 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
             Intro.principal.PanelSegundo.add(p1);
         }
+        p1.cargarInformacion(4);
         Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -328,6 +332,7 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
             Intro.principal.PanelSegundo.add(p1);
         }
+        p1.cargarInformacion(1);
         Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -340,6 +345,7 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
             Intro.principal.PanelSegundo.add(p1);
         }
+        p1.cargarInformacion(8);        
         Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -352,6 +358,7 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
             Intro.principal.PanelSegundo.add(p1);
         }
+        p1.cargarInformacion(3);
         Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -364,6 +371,7 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
             Intro.principal.PanelSegundo.add(p1);
         }
+        p1.cargarInformacion(6);
         Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
@@ -376,6 +384,7 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
             Intro.principal.PanelSegundo.add(p1);
         }
+        p1.cargarInformacion(5);
         Intro.principal.PanelSexto.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
