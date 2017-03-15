@@ -18,9 +18,9 @@ public class Principal extends javax.swing.JInternalFrame {
     public static ArrayList<Comida> lista = new ArrayList<Comida>();
 
     public static Boolean atras = false;
-    
+
     public static Pedido nuevoPedido = new Pedido();
-    
+
     public Principal() {
         initComponents();
         cargarPedidos();
@@ -33,7 +33,6 @@ public class Principal extends javax.swing.JInternalFrame {
     public void setPanel2(JPanel Panel2) {
         this.PanelPrimero = Panel2;
     }
-    
 
     public void cargarPedidos() {
 
@@ -54,7 +53,6 @@ public class Principal extends javax.swing.JInternalFrame {
 
     public void cargarPedido(String lineaPedido) {
 
-        
         String[] atributosPedidos = lineaPedido.split("--");
 
         String[] primerPlato = atributosPedidos[1].split("\\*");
@@ -64,7 +62,7 @@ public class Principal extends javax.swing.JInternalFrame {
             int inicio = primerPlato[i].indexOf(".");
             int fin = inicio + 2;
 
-            comidaPP[i] = new Comida(primerPlato[i].substring(0, inicio),0f);
+            comidaPP[i] = new Comida(primerPlato[i].substring(0, inicio), 0f);
             comidaPP[i].setCantidad(Integer.parseInt(primerPlato[i].substring(inicio + 1, fin)));
         }
 
@@ -113,21 +111,21 @@ public class Principal extends javax.swing.JInternalFrame {
             AyudaPP.add(comidaPP[i]);
         }
         PedidoCargado.setPrimerPlato(AyudaPP);
-        
+
         //Segundo plato
         ArrayList<Comida> AyudaSP = new ArrayList<Comida>();
         for (int i = 0; i < segundoPlato.length; i++) {
             AyudaSP.add(comidaSP[i]);
         }
         PedidoCargado.setSegundoPlato(AyudaSP);
-        
+
         //Postre
         ArrayList<Comida> AyudaPostre = new ArrayList<Comida>();
         for (int i = 0; i < postre.length; i++) {
             AyudaPostre.add(comidaPostre[i]);
         }
         PedidoCargado.setPostre(AyudaPostre);
-        
+
         //Bebida
         ArrayList<Comida> AyudaBebida = new ArrayList<Comida>();
         for (int i = 0; i < bebida.length; i++) {
@@ -135,13 +133,12 @@ public class Principal extends javax.swing.JInternalFrame {
         }
         PedidoCargado.setBebida(AyudaBebida);
         PedidoCargado.setPrecioPedido(Float.parseFloat(atributosPedidos[5]));
-        
+
         TotalPedidos.add(PedidoCargado);
-   
+
     }
-    
-    
-     public static void escribirPedidos() {
+
+    public static void escribirPedidos() {
 
         File ar = new File("ListaPedidos.txt");
         Scanner sc;
@@ -151,7 +148,7 @@ public class Principal extends javax.swing.JInternalFrame {
             sc = new Scanner(ar);
             escritor.write("");
 
-            for(Pedido i : TotalPedidos){
+            for (Pedido i : TotalPedidos) {
                 escribirPed(ar);
             }
             escritor.close();
@@ -163,58 +160,58 @@ public class Principal extends javax.swing.JInternalFrame {
 
     public static void escribirPed(File ar) throws IOException {
         FileWriter escritor = new FileWriter(ar);
-        
-        for (Pedido i : TotalPedidos){
+
+        for (Pedido i : TotalPedidos) {
             String PedidoEscritor = "";
             int cont = 0;
-            
+
             PedidoEscritor += i.getN_mesa() + "--";
-            
-            for(Comida j : i.primerPlato){
-                if (cont == 0)
+
+            for (Comida j : i.primerPlato) {
+                if (cont == 0) {
                     PedidoEscritor += j.getNombre() + "." + j.getCantidad();
-                else
+                } else {
                     PedidoEscritor += "\\*" + j.getNombre() + "." + j.getCantidad();
+                }
             }
             cont = 0;
             PedidoEscritor += "--";
-            
-            for(Comida j : i.segundoPlato){
-                if (cont == 0)
+
+            for (Comida j : i.segundoPlato) {
+                if (cont == 0) {
                     PedidoEscritor += j.getNombre() + "." + j.getCantidad();
-                else
+                } else {
                     PedidoEscritor += "\\*" + j.getNombre() + "." + j.getCantidad();
+                }
             }
             cont = 0;
             PedidoEscritor += "--";
-            
-            for(Comida j : i.postre){
-                if (cont == 0)
+
+            for (Comida j : i.postre) {
+                if (cont == 0) {
                     PedidoEscritor += j.getNombre() + "." + j.getCantidad();
-                else
+                } else {
                     PedidoEscritor += "\\*" + j.getNombre() + "." + j.getCantidad();
+                }
             }
-            
+
             cont = 0;
             PedidoEscritor += "--";
-            
-            for(Comida j : i.bebida){
-                if (cont == 0)
+
+            for (Comida j : i.bebida) {
+                if (cont == 0) {
                     PedidoEscritor += j.getNombre() + "." + j.getCantidad();
-                else
+                } else {
                     PedidoEscritor += "\\*" + j.getNombre() + "." + j.getCantidad();
+                }
             }
-            
+
             cont = 0;
             PedidoEscritor += "--" + i.precioPedido;
             escritor.write(PedidoEscritor + "\n");
             escritor.flush();
         }
     }
-        
-        
-        
-        
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -424,7 +421,7 @@ public class Principal extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         ListaDeMesas p1 = new ListaDeMesas();
         Panel.setVisible(false);
-        if (Intro.principal.PanelPrimero.getComponentCount() == 0){
+        if (Intro.principal.PanelPrimero.getComponentCount() == 0) {
             PanelPrimero.add(p1);
         }
         PanelPrimero.setVisible(true);
@@ -436,7 +433,7 @@ public class Principal extends javax.swing.JInternalFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         VistaMesas p1 = new VistaMesas();
         Panel.setVisible(false);
-        if (Intro.principal.PanelPrimero.getComponentCount() == 0){
+        if (Intro.principal.PanelPrimero.getComponentCount() == 0) {
             PanelPrimero.add(p1);
         }
         PanelPrimero.setVisible(true);

@@ -24,7 +24,6 @@ public class VistaMesas extends javax.swing.JInternalFrame {
         cargarMesas();
 
     }
-    VisualizacionPedido p1 = new VisualizacionPedido();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -276,89 +275,106 @@ public class VistaMesas extends javax.swing.JInternalFrame {
     }
 
     private void btnM9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM9ActionPerformed
+        VisualizacionPedido p1 = new VisualizacionPedido();
         Intro.principal.PanelPrimero.setVisible(false);
-        if (Intro.principal.PanelSexto.getComponentCount() == 0) {
-            Intro.principal.PanelSexto.add(p1);
+        if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
+            Intro.principal.PanelSegundo.add(p1);
         }
-        Intro.principal.PanelSexto.setVisible(true);
+        Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_btnM9ActionPerformed
     private void btnM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM7ActionPerformed
+        VisualizacionPedido p1 = new VisualizacionPedido();
+
         Intro.principal.PanelPrimero.setVisible(false);
-        if (Intro.principal.PanelSexto.getComponentCount() == 0) {
-            Intro.principal.PanelSexto.add(p1);
+        if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
+            Intro.principal.PanelSegundo.add(p1);
         }
-        Intro.principal.PanelSexto.setVisible(true);
+        Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_btnM7ActionPerformed
     private void btnM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM2ActionPerformed
+        VisualizacionPedido p1 = new VisualizacionPedido();
+
         Intro.principal.PanelPrimero.setVisible(false);
-        if (Intro.principal.PanelSexto.getComponentCount() == 0) {
-            Intro.principal.PanelSexto.add(p1);
+        if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
+            Intro.principal.PanelSegundo.add(p1);
         }
-        Intro.principal.PanelSexto.setVisible(true);
+        Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_btnM2ActionPerformed
     private void btnM4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM4ActionPerformed
+        VisualizacionPedido p1 = new VisualizacionPedido();
+
         Intro.principal.PanelPrimero.setVisible(false);
-        if (Intro.principal.PanelSexto.getComponentCount() == 0) {
-            Intro.principal.PanelSexto.add(p1);
+        if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
+            Intro.principal.PanelSegundo.add(p1);
         }
-        Intro.principal.PanelSexto.setVisible(true);
+        Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_btnM4ActionPerformed
     private void btnM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM1ActionPerformed
+        VisualizacionPedido p1 = new VisualizacionPedido();
+
         Intro.principal.PanelPrimero.setVisible(false);
-        if (Intro.principal.PanelSexto.getComponentCount() == 0) {
-            Intro.principal.PanelSexto.add(p1);
+        if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
+            Intro.principal.PanelSegundo.add(p1);
         }
-        Intro.principal.PanelSexto.setVisible(true);
+        Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_btnM1ActionPerformed
     private void btnM8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM8ActionPerformed
+        VisualizacionPedido p1 = new VisualizacionPedido();
+
         Intro.principal.PanelPrimero.setVisible(false);
-        if (Intro.principal.PanelSexto.getComponentCount() == 0) {
-            Intro.principal.PanelSexto.add(p1);
+        if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
+            Intro.principal.PanelSegundo.add(p1);
         }
-        Intro.principal.PanelSexto.setVisible(true);
+        Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_btnM8ActionPerformed
     private void btnM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM3ActionPerformed
+        VisualizacionPedido p1 = new VisualizacionPedido();
+
         Intro.principal.PanelPrimero.setVisible(false);
-        if (Intro.principal.PanelSexto.getComponentCount() == 0) {
-            Intro.principal.PanelSexto.add(p1);
+        if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
+            Intro.principal.PanelSegundo.add(p1);
         }
-        Intro.principal.PanelSexto.setVisible(true);
+        Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_btnM3ActionPerformed
     private void btnM6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM6ActionPerformed
+        VisualizacionPedido p1 = new VisualizacionPedido();
+
         Intro.principal.PanelPrimero.setVisible(false);
-        if (Intro.principal.PanelSexto.getComponentCount() == 0) {
-            Intro.principal.PanelSexto.add(p1);
+        if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
+            Intro.principal.PanelSegundo.add(p1);
         }
-        Intro.principal.PanelSexto.setVisible(true);
+        Intro.principal.PanelSegundo.setVisible(true);
         p1.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) p1.getUI()).setNorthPane(null);
         p1.show();
     }//GEN-LAST:event_btnM6ActionPerformed
     private void btnM5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM5ActionPerformed
+        VisualizacionPedido p1 = new VisualizacionPedido();
+
         Intro.principal.PanelPrimero.setVisible(false);
-        if (Intro.principal.PanelSexto.getComponentCount() == 0) {
-            Intro.principal.PanelSexto.add(p1);
+        if (Intro.principal.PanelSegundo.getComponentCount() == 0) {
+            Intro.principal.PanelSegundo.add(p1);
         }
         Intro.principal.PanelSexto.setVisible(true);
         p1.setBorder(null);

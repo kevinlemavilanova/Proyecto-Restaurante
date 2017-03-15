@@ -101,16 +101,16 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         list = new javax.swing.JScrollPane();
         modeloPP=new DefaultListModel();
-        listaPP = new javax.swing.JList<>();
+        listaPP = new javax.swing.JList<String>();
         list1 = new javax.swing.JScrollPane();
         modeloPostre=new DefaultListModel();
-        listaPostre = new javax.swing.JList<>();
+        listaPostre = new javax.swing.JList<String>();
         list4 = new javax.swing.JScrollPane();
         modeloSP=new DefaultListModel();
-        listaPS = new javax.swing.JList<>();
+        listaPS = new javax.swing.JList<String>();
         listaBebida = new javax.swing.JScrollPane();
         modeloBebida=new DefaultListModel();
-        listaPP4 = new javax.swing.JList<>();
+        listaPP4 = new javax.swing.JList<String>();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -143,7 +143,7 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("MV Boli", 1, 30)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Primer plato:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 220, 50));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 240, 50));
 
         lbNumM.setFont(new java.awt.Font("MV Boli", 1, 24)); // NOI18N
         lbNumM.setForeground(new java.awt.Color(255, 255, 255));
@@ -245,7 +245,7 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Intro.principal.PanelSexto.setVisible(false);
+        Intro.principal.PanelSegundo.setVisible(false);
         Intro.principal.PanelPrimero.remove(0);
         Intro.principal.PanelPrimero.add(p1);
         Intro.principal.PanelPrimero.setVisible(true);
@@ -259,13 +259,14 @@ public class VisualizacionPedido extends javax.swing.JInternalFrame {
             int ayuda = Integer.parseInt(lbNumM.getText());
             if (i.getN_mesa() == ayuda) {
                 TotalPedidos.remove(i);
+                break;
             }
         }
-        Intro.principal.PanelSexto.setVisible(false);
+        Intro.principal.PanelSegundo.setVisible(false);
         Intro.principal.Panel.setVisible(true);
         Principal.escribirPedidos();
         Intro.principal.PanelPrimero.removeAll();
-        Intro.principal.PanelSexto.removeAll();
+        Intro.principal.PanelSegundo.removeAll();
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
